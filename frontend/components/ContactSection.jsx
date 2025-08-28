@@ -21,12 +21,14 @@ export default function ContactSection() {
               <label className='block text-sm mb-2'>YOUR NAME</label>
               <input
                 type='text'
+                placeholder='Enter your name'
                 className='w-full bg-[#1E1E1E] p-3 rounded border-none focus:outline-none'
               />
             </div>
             <div>
               <label className='block text-sm mb-2'>PHONE NUMBER</label>
               <input
+                placeholder='Enter your phone number'
                 type='text'
                 className='w-full bg-[#1E1E1E] p-3 rounded border-none focus:outline-none'
               />
@@ -35,6 +37,7 @@ export default function ContactSection() {
               <label className='block text-sm mb-2'>EMAIL</label>
               <input
                 type='email'
+                placeholder='Enter your email'
                 className='w-full bg-[#1E1E1E] p-3 rounded border-none focus:outline-none'
               />
             </div>
@@ -53,6 +56,7 @@ export default function ContactSection() {
             <label className='block text-sm mb-2'>SUBJECT</label>
             <input
               type='text'
+              placeholder='Enter subject'
               className='w-full bg-[#1E1E1E] p-3 rounded border-none focus:outline-none'
             />
           </div>
@@ -60,7 +64,8 @@ export default function ContactSection() {
           <div>
             <label className='block text-sm mb-2'>MESSAGE</label>
             <textarea
-              rows='5'
+              rows='3'
+              placeholder='Enter your message'
               className='w-full bg-[#1E1E1E] p-3 rounded border-none focus:outline-none'
             ></textarea>
           </div>
