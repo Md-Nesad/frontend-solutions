@@ -2,6 +2,8 @@
 import { useState, useEffect } from 'react'
 import { ShoppingCart, Menu, X } from 'lucide-react'
 import { handleScroll } from '../utility/utility'
+import Logo from '@/public/Logo.png'
+import Image from 'next/image'
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false)
@@ -40,62 +42,64 @@ export default function Navbar() {
   }, [])
 
   return (
-    <nav className='bg-[#212428] border-b border-gray-700 px-6 md:px-10 py-4 flex items-center sm:justify-around max-sm:justify-between fixed top-0 left-0 w-full z-50'>
+    <nav className='bg-[#212428] border-b border-gray-700 px-6 md:px-42 py-4 flex items-center justify-between fixed top-0 left-0 w-full z-50'>
       {/* Logo */}
-      <div className='flex items-center gap-2'>
-        <div className='w-6 h-6 bg-gradient-to-tr from-red-500 to-yellow-400 rotate-45 rounded-sm'></div>
-        <h1 className='text-white font-semibold text-xl'>Pixell BD</h1>
+      <div className='flex items-center gap-2 md:mr-90'>
+        <Image src={Logo} alt='Logo' width={38} height={38} />
+        <h1 className='text-[#FFFFFF] font-semibold text-xl'>Pixell BD</h1>
       </div>
 
       {/* Desktop Menu */}
-      <ul className='hidden md:flex items-center gap-8 text-gray-300'>
+      <ul className='hidden md:flex items-center gap-8 text-[#FFFFFFB2]'>
         {sections.map((item) => (
           <li
             key={item}
             onClick={() => handleClick(item)}
             className={`relative cursor-pointer capitalize transition ${
               active === item
-                ? 'text-red-500 font-semibold'
+                ? 'text-[#FFFFFF] font-semibold'
                 : 'hover:text-white'
             }`}
           >
             {item}
             {active === item && (
-              <span className='absolute left-0 -bottom-1 w-full h-[2px] bg-red-500'></span>
+              <span className='absolute left-0 -bottom-1 w-full h-[1.5px] bg-[#EE4036]'></span>
             )}
           </li>
         ))}
       </ul>
 
-      {/* Buy Now Button */}
-      <button
-        onClick={() => handleClick('contact')}
-        className={`hidden md:flex items-center gap-2 bg-[#1A1C20] shadow-md shadow-black/60 px-4 py-2 rounded-md font-medium hover:scale-105 transition text-red-500
-        }`}
-      >
-        <ShoppingCart size={16} />
-        Buy Now
-      </button>
+      {/* Buttons (Buy Now + Mobile Menu) */}
+      <div className='flex items-center gap-3'>
+        {/* Buy Now Button */}
+        <button
+          onClick={() => handleClick('contact')}
+          className='hidden md:flex items-center gap-2 bg-[#1A1C20] shadow-md shadow-[#63636352] px-4 py-2 rounded-md font-medium hover:scale-105 transition text-[#EE4036]'
+        >
+          <ShoppingCart size={16} />
+          Buy Now
+        </button>
 
-      {/* Mobile Menu Button */}
-      <button
-        className='md:hidden text-white'
-        onClick={() => setIsOpen(!isOpen)}
-      >
-        {isOpen ? <X size={24} /> : <Menu size={24} />}
-      </button>
+        {/* Mobile Menu Button */}
+        <button
+          className='md:hidden text-white'
+          onClick={() => setIsOpen(!isOpen)}
+        >
+          {isOpen ? <X size={24} /> : <Menu size={24} />}
+        </button>
+      </div>
 
       {/* Mobile Menu */}
       {isOpen && (
-        <div className='absolute top-16 left-0 w-full bg-[#1E2125] border-t border-gray-700 md:hidden'>
-          <ul className='flex flex-col items-center py-4 space-y-4 text-gray-300'>
+        <div className='absolute top-16 left-0 w-full bg-[#212428] border-t border-gray-700 md:hidden'>
+          <ul className='flex flex-col items-center py-4 space-y-4 text-[#FFFFFFB2]'>
             {sections.map((item) => (
               <li
                 key={item}
                 onClick={() => handleClick(item)}
                 className={`cursor-pointer capitalize ${
                   active === item
-                    ? 'text-red-500 font-semibold'
+                    ? 'text-[#FFFFFF] font-semibold'
                     : 'hover:text-white'
                 }`}
               >
@@ -104,8 +108,8 @@ export default function Navbar() {
             ))}
             <button
               onClick={() => handleClick('contact')}
-              className={`flex items-center gap-2 bg-[#1A1C20] shadow-md shadow-black/60 px-4 py-2 rounded-md font-medium hover:scale-105 transition ${
-                active === 'contact' ? 'text-red-500' : 'text-gray-300'
+              className={`flex items-center gap-2 bg-[#212428] shadow-md shadow-[#63636352] px-4 py-2 rounded-md font-medium hover:scale-105 transition duration-300 ${
+                active === 'contact' ? 'text-[#EE4036]' : 'text-[#EE4036]'
               }`}
             >
               <ShoppingCart size={16} />

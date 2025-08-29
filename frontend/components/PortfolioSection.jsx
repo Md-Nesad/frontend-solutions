@@ -1,91 +1,55 @@
-import uiux from '@/public/portfolioImage/uiuxDesign.png'
-import webdesign from '@/public/portfolioImage/webDesign.png'
-import mobileApp from '@/public/portfolioImage/mobileAppDesign.png'
-import frontend from '@/public/portfolioImage/frontend.png'
-import branding from '@/public/portfolioImage/brandingDesign.png'
-import prototype from '@/public/portfolioImage/prototype.png'
+import { portfolioItems } from '@/data/data'
+import { Arrow } from '@/public/Icon'
 import Image from 'next/image'
-
-const portfolioItems = [
-  {
-    title: 'UI/UX Design',
-    description: 'Crafting intuitive user experiences.',
-    image: uiux,
-  },
-  {
-    title: 'Web Design',
-    description: 'Designing responsive websites.',
-    image: webdesign,
-    arrow: true,
-  },
-  {
-    title: 'Mobile App Design',
-    description: 'Creating seamless and engaging app interfaces.',
-    image: mobileApp,
-  },
-  {
-    title: 'Frontend Development',
-    description: 'Interactive and user-friendly web interfaces.',
-    image: frontend,
-  },
-  {
-    title: 'Branding Design',
-    description: 'Developing strong and cohesive brand identities.',
-    image: branding,
-  },
-  {
-    title: 'Interactive Prototypes',
-    description: 'Clickable interactive designs.',
-    image: prototype,
-  },
-]
 
 export default function PortfolioSection() {
   return (
     <section
       id='portfolio'
-      className='bg-[#1E1E1E] text-white py-20 px-6 md:px-16 lg:px-42'
+      className='bg-[#212428] text-white py-20 px-6 md:px-16 lg:px-42 mt-1'
     >
       {/* Heading */}
       <div className='text-center mb-16'>
-        <p className='text-red-500 font-semibold text-sm uppercase'>
+        <p className='text-red-500 font-semibold text-sm uppercase mt-2'>
           My Portfolio
         </p>
-        <h2 className='text-4xl md:text-5xl font-bold mt-2'>
+        <h2 className='text-4xl md:text-4xl font-bold mt-2'>
           Design & Development Highlights
         </h2>
       </div>
 
       {/* Grid */}
-      <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
-        {portfolioItems.map(
-          (item, index) => (
-            console.log(item),
-            (
-              <div
-                key={index}
-                className='bg-[#2A2A2A] rounded-lg overflow-hidden shadow hover:shadow-xl transition duration-300'
+      <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
+        {portfolioItems.map((item, index) => (
+          <div
+            key={index}
+            className=' bg-[#212428] rounded-lg overflow-hidden shadow-[0_0_7px_rgba(255,255,255,0.3)] transition duration-300 relative'
+          >
+            <Image
+              src={item.image}
+              alt={item.title}
+              className='w-full h-48 object-cover hover:scale-110 transition duration-300 ease-in-out'
+            />
+            <div className='p-5 group mb-5'>
+              <h3 className='text-[#EE4036] font-medium mb-4'>{item.title}</h3>
+              <p className='text-xl font-semibold pr-15 mb-10 text-gray-300 flex items-center gap-2'>
+                {item.description}
+              </p>
+
+              {/* Hover Arrow */}
+              <button
+                className='
+          text-red-500 text-xl absolute bottom-5 left-5
+          opacity-0 translate-x-[-10px]
+          transition-all duration-300 ease-in-out
+          group-hover:opacity-100 group-hover:translate-x-0
+        '
               >
-                <Image
-                  src={item.image}
-                  alt={item.title}
-                  className='w-full h-48 object-cover'
-                />
-                <div className='p-5'>
-                  <h3 className='text-red-500 font-medium mb-2'>
-                    {item.title}
-                  </h3>
-                  <p className='text-md text-gray-300 flex items-center gap-2'>
-                    {item.description}
-                    {item.arrow && (
-                      <span className='text-red-500 text-xl'>→</span>
-                    )}
-                  </p>
-                </div>
-              </div>
-            )
-          )
-        )}
+                <Arrow />
+              </button>
+            </div>
+          </div>
+        ))}
       </div>
     </section>
   )

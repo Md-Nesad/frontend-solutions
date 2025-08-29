@@ -11,8 +11,44 @@ import fiverr from '@/public/HeroImage/fiverr.png'
 import upwork from '@/public/HeroImage/upwork.png'
 import facebook from '@/public/HeroImage/facebook.png'
 import { handleScroll } from '../utility/utility'
+import { useEffect, useState } from 'react'
 
 export default function HeroArea() {
+  const titles = ['UI/UX Designer', 'Frontend Developer']
+  const [displayedText, setDisplayedText] = useState('')
+  const [titleIndex, setTitleIndex] = useState(0)
+  const [charIndex, setCharIndex] = useState(0)
+  const [deleting, setDeleting] = useState(false)
+
+  useEffect(() => {
+    const speed = deleting ? 50 : 100 // typing/deleting speed
+
+    const timeout = setTimeout(() => {
+      const fullText = titles[titleIndex]
+
+      if (!deleting) {
+        // Typing
+        setDisplayedText(fullText.substring(0, charIndex + 1))
+        setCharIndex(charIndex + 1)
+
+        if (charIndex + 1 === fullText.length) {
+          // Wait before deleting
+          setTimeout(() => setDeleting(true), 1000)
+        }
+      } else {
+        // Deleting
+        setDisplayedText(fullText.substring(0, charIndex - 1))
+        setCharIndex(charIndex - 1)
+
+        if (charIndex - 1 === 0) {
+          setDeleting(false)
+          setTitleIndex((titleIndex + 1) % titles.length)
+        }
+      }
+    }, speed)
+
+    return () => clearTimeout(timeout)
+  }, [charIndex, deleting, titleIndex])
   return (
     <section
       id='home'
@@ -26,7 +62,7 @@ export default function HeroArea() {
 
         <h1 className='text-4xl md:text-5xl font-bold leading-tight'>
           Hi, I’m <span className='text-orange-400'>Micel Brown</span> <br />a{' '}
-          <span className='text-white'>UI/UX Designer.</span>
+          <span className='text-white'>{displayedText}.</span>
         </h1>
 
         <p className='text-gray-300 leading-relaxed'>
@@ -37,53 +73,67 @@ export default function HeroArea() {
         {/* Contact Button */}
         <button
           onClick={() => handleScroll('contact')}
-          className='flex items-center gap-2 bg-[#1A1C20] shadow-md shadow-black/50 px-6 py-3 rounded-md text-red-500 font-semibold hover:scale-105 transition'
+          className='flex items-center gap-2 bg-[#212428] shadow-md shadow-[#63636352] px-6 py-3 rounded-md text-[#EE4036] font-semibold hover:scale-105 transition'
         >
           Contact me <ArrowRight size={18} />
         </button>
 
         {/* Skills & Socials */}
-        <div className='mt-8 flex flex-col md:flex-row items-center gap-10'>
+        <div className='mt-8 flex flex-col md:flex-row items-start md:items-center gap-10'>
           {/* Skills */}
           <div>
             <p className='text-xs tracking-widest text-gray-400 mb-3'>
               BEST SKILL ON
             </p>
             <div className='flex gap-3'>
-              <div className='bg-[#1A1C20] p-3 rounded-lg'>
-                <Image src={figma} alt='figma' />
-              </div>
-
-              <div className='bg-[#1A1C20] p-3 rounded-lg'>
-                <Image src={xd} alt='xd' />
-              </div>
-              <div className='bg-[#1A1C20] p-3 rounded-lg'>
-                <Image src={photoshop} alt='photoshop' width={28} height={28} />
-              </div>
-              <div className='bg-[#1A1C20] p-3 rounded-lg'>
-                <Image src={react} alt='react' width={28} height={28} />
-              </div>
-              <div className='bg-[#1A1C20] p-3 rounded-lg'>
-                <Image src={next} alt='nextjs' width={28} height={28} />
-              </div>
+              {[figma, xd, photoshop, react, next].map((icon, idx) => (
+                <div
+                  key={idx}
+                  className='bg-[#191a1d] p-3 rounded-lg w-14 h-14 flex items-center justify-center 
+                     transition-transform duration-300 hover:scale-110 hover:shadow-md hover:shadow-[#63636352]'
+                >
+                  <Image
+                    src={icon}
+                    alt='skill icon'
+                    width={28}
+                    height={28}
+                    className='object-contain'
+                  />
+                </div>
+              ))}
             </div>
           </div>
 
           {/* Social Links */}
-          <div>
+          <div className='md:mt-1'>
             <p className='text-xs tracking-widest text-gray-400 mb-2'>
               FIND WITH ME
             </p>
             <div className='flex gap-3'>
-              <a href='#' className='w-18 h-18'>
-                <Image src={upwork} alt='Upwork' />
-              </a>
-              <a href='#' className='w-18 h-18'>
-                <Image src={fiverr} alt='Fiverr' />
-              </a>
-              <a href='#' className='w-18 h-18'>
-                <Image src={facebook} alt='Facebook' />
-              </a>
+              {[
+                { src: upwork, alt: 'Upwork', link: 'https://www.upwork.com' },
+                { src: fiverr, alt: 'Fiverr', link: 'https://www.fiverr.com' },
+                {
+                  src: facebook,
+                  alt: 'Facebook',
+                  link: 'https://www.facebook.com',
+                },
+              ].map((social, idx) => (
+                <a
+                  key={idx}
+                  href={social.link}
+                  target='_blank'
+                  rel='noopener noreferrer'
+                  className='w-14 h-14 flex items-center justify-center bg-[#212428] rounded-lg
+                     transition-transform duration-300 hover:scale-110 hover:shadow-md hover:shadow-[#63636352]'
+                >
+                  <Image
+                    src={social.src}
+                    alt={social.alt}
+                    className='object-contain'
+                  />
+                </a>
+              ))}
             </div>
           </div>
         </div>
