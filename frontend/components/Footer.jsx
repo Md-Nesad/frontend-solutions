@@ -16,7 +16,7 @@ export default function Footer() {
                 Pixell BD
               </h2>
             </div>
-            <p className='text-sm text-[#F5EDFFCC] leading-relaxed'>
+            <p className='text-xl text-[#F5EDFFCC] leading-relaxed'>
               Pixell BD is a UI/UX design and frontend development studio. We
               specialize in crafting simple, beautiful, and user-friendly
               digital experiences that not only look great but also engage users
@@ -28,7 +28,7 @@ export default function Footer() {
 
           {/* Middle - Quick Links */}
           <div>
-            <h3 className='text-[#EE4036] text-lg font-semibold mb-4'>
+            <h3 className='text-[#EE4036] text-md font-semibold mb-4'>
               Quick Link
             </h3>
             <ul className='space-y-2 text-[#F5EDFFCC]'>
