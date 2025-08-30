@@ -6,12 +6,6 @@ import ledger from '@/public/clientPicture/ledger.png'
 import california from '@/public/clientPicture/califarnia.png'
 import teplo from '@/public/clientPicture/teplo.png'
 import harry from '@/public/clientPicture/harry.png'
-import uiux from '@/public/portfolioImage/uiuxDesign.png'
-import webdesign from '@/public/portfolioImage/webDesign.png'
-import mobileApp from '@/public/portfolioImage/mobileAppDesign.png'
-import frontend from '@/public/portfolioImage/frontend.png'
-import branding from '@/public/portfolioImage/brandingDesign.png'
-import prototype from '@/public/portfolioImage/prototype.png'
 import alexander from '@/public/persons/Alexander Carter.jpg'
 import sophia from '@/public/persons/Sophia Martinez.jpg'
 import benjamin from '@/public/persons/Benjamin Thomps.jpg'
@@ -77,40 +71,6 @@ export const clients = [
     name: 'Isabella Clark',
     role: 'UX Lead',
     avatar: isabella,
-  },
-]
-
-export const portfolioItems = [
-  {
-    title: 'UI/UX Design',
-    description: 'Crafting intuitive user experiences.',
-    image: uiux,
-  },
-  {
-    title: 'Web Design',
-    description: 'Designing responsive websites.',
-    image: webdesign,
-    arrow: true,
-  },
-  {
-    title: 'Mobile App Design',
-    description: 'Creating seamless and engaging app interfaces.',
-    image: mobileApp,
-  },
-  {
-    title: 'Frontend Development',
-    description: 'Interactive and user-friendly web interfaces.',
-    image: frontend,
-  },
-  {
-    title: 'Branding Design',
-    description: 'Developing strong and cohesive brand identities.',
-    image: branding,
-  },
-  {
-    title: 'Interactive Prototypes',
-    description: 'Clickable interactive designs.',
-    image: prototype,
   },
 ]
 
