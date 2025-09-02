@@ -3,25 +3,25 @@ import Image from 'next/image'
 import { ArrowRight } from 'lucide-react'
 import profileImg from '@/public/HeroImage/heroImage.png'
 import figma from '@/public/HeroImage/figma.png'
-import xd from '@/public/HeroImage/xd.png'
-import photoshop from '@/public/HeroImage/photoshop.png'
+import xd from '@/public/HeroImage/tailwind.png'
+import photoshop from '@/public/HeroImage/javascript.png'
 import react from '@/public/HeroImage/react.png'
 import next from '@/public/HeroImage/next.png'
 import fiverr from '@/public/HeroImage/fiverr.png'
 import upwork from '@/public/HeroImage/upwork.png'
-import facebook from '@/public/HeroImage/facebook.png'
+import facebook from '@/public/HeroImage/whatsapp.png'
 import { handleScroll } from '../utility/utility'
 import { useEffect, useState } from 'react'
 
 export default function HeroArea() {
-  const titles = ['UI/UX Designer', 'Frontend Developer']
+  const titles = ['Frontend Developer', 'React Developer', 'Next.js Developer']
   const [displayedText, setDisplayedText] = useState('')
   const [titleIndex, setTitleIndex] = useState(0)
   const [charIndex, setCharIndex] = useState(0)
   const [deleting, setDeleting] = useState(false)
 
   useEffect(() => {
-    const speed = deleting ? 50 : 100 // typing/deleting speed
+    const speed = deleting ? 50 : 60 // typing/deleting speed
 
     const timeout = setTimeout(() => {
       const fullText = titles[titleIndex]
@@ -33,7 +33,7 @@ export default function HeroArea() {
 
         if (charIndex + 1 === fullText.length) {
           // Wait before deleting
-          setTimeout(() => setDeleting(true), 1000)
+          setTimeout(() => setDeleting(true), 200)
         }
       } else {
         // Deleting
@@ -57,17 +57,18 @@ export default function HeroArea() {
       {/* Left Side */}
       <div className='max-w-xl space-y-5'>
         <p className='uppercase tracking-widest text-sm text-gray-400'>
-          Welcome to <span className='text-white font-medium'>Pixell BD</span>
+          Welcome to
+          <span className='text-white font-medium'> Frontend Solutions</span>
         </p>
 
         <h1 className='text-4xl md:text-5xl font-bold leading-tight'>
-          Hi, I’m <span className='text-orange-400'>Micel Brown</span> <br />a{' '}
+          Hi, I’m <span className='text-orange-400'>Md. Nesad</span> <br />a{' '}
           <span className='text-white'>{displayedText}.</span>
         </h1>
 
         <p className='text-gray-300 leading-relaxed'>
-          I design intuitive, visually engaging digital experiences and build
-          frontend solutions that connect users with brands.
+          I design and develop intuitive, visually engaging digital experiences
+          and build frontend solutions that connect users with brands.
         </p>
 
         {/* Contact Button */}
@@ -95,8 +96,8 @@ export default function HeroArea() {
                   <Image
                     src={icon}
                     alt='skill icon'
-                    width={28}
-                    height={28}
+                    width={34}
+                    height={34}
                     className='object-contain'
                   />
                 </div>
