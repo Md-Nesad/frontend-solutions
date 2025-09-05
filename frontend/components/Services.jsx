@@ -11,8 +11,8 @@ export default function Services() {
         <p className='text-[#EE4036] font-semibold uppercase tracking-widest'>
           My Services
         </p>
-        <h2 className='text-3xl md:text-4xl font-bold'>
-          UI/UX Design & Frontend Development
+        <h2 className='text-3xl md:text-3xl font-bold'>
+          Website and Application Development
         </h2>
       </div>
 
@@ -21,12 +21,12 @@ export default function Services() {
         {services.map((service, index) => (
           <div
             key={index}
-            className='bg-[#212428] px-9 py-6 rounded-lg hover:bg-[#191C1F] shadow-[0_0_5px_rgba(255,255,255,0.3)] hover:scale-105 transition-all duration-300'
+            className='bg-[#212428] px-7 py-6 rounded-lg hover:bg-[#191C1F] shadow-[0_0_5px_rgba(255,255,255,0.3)] hover:scale-105 transition-all duration-300'
           >
             {/* Circle Icon Placeholder */}
             <div className='w-12 h-12 border-5 border-[#FAAF40] rounded-full mb-4'></div>
             <h3 className='text-xl font-bold mb-4 mt-6'>{service.title}</h3>
-            <p className='text-[#F5EDFF] text-md leading-relaxed'>
+            <p className='text-[#f5edffe4] text-md leading-relaxed'>
               {service.desc}
             </p>
           </div>

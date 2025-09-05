@@ -76,28 +76,29 @@ export const clients = [
 
 export const services = [
   {
-    title: 'UI/UX Design',
-    desc: 'Creating user-centered interfaces that are both visually appealing and easy to navigate.',
+    title: 'Figma to React, Next.js',
+    desc: 'Convert your Figma or design files into fully functional, pixel-perfect React or Next.js applications with responsive UI and clean code.',
   },
   {
-    title: 'Web Design',
-    desc: 'Designing responsive and modern websites that reflect your brand and engage visitors.',
+    title: 'Landing page',
+    desc: 'High-converting, SEO-friendly landing pages built with modern design and fast performance to boost your sales and customer engagement.',
   },
   {
-    title: 'Mobile App Design',
-    desc: 'Crafting sleek, intuitive app interfaces that offer seamless experiences on any device.',
+    title: 'Business website',
+    desc: 'Professional, responsive websites tailored for your business, helping you build trust, showcase services, and attract potential clients online.',
+  },
+
+  {
+    title: 'Dashboard (Admin panel)',
+    desc: 'Custom dashboards and admin panels with real-time data visualization, easy management tools, and responsive design for smooth operations.',
   },
   {
     title: 'Wireframes & Prototypes',
-    desc: 'Building clear blueprints and interactive prototypes to visualize ideas before development.',
+    desc: 'Bring your ideas to life with interactive wireframes and prototypes, helping you visualize the flow and validate concepts before full development.',
   },
   {
-    title: 'User Interface (Frontend)',
-    desc: 'Designing clean, responsive, and intuitive interfaces for seamless user experiences.',
-  },
-  {
-    title: 'User Research & Testing',
-    desc: 'Understanding user behavior through research and testing to improve design decisions.',
+    title: 'API Integration',
+    desc: 'Seamless integration of third-party APIs (payment, maps, authentication, etc.) to extend your website’s functionality and improve user experience.',
   },
 ]
 
