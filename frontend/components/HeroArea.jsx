@@ -12,6 +12,7 @@ import upwork from '@/public/HeroImage/upwork.png'
 import facebook from '@/public/HeroImage/whatsapp.png'
 import { handleScroll } from '../utility/utility'
 import { useEffect, useState } from 'react'
+import { motion } from 'framer-motion'
 
 export default function HeroArea() {
   const titles = ['Frontend Developer', 'React Developer', 'Next.js Developer']
@@ -56,28 +57,46 @@ export default function HeroArea() {
     >
       {/* Left Side */}
       <div className='max-w-xl space-y-5'>
-        <p className='uppercase tracking-widest text-sm text-gray-400'>
+        <motion.p
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+          className='uppercase tracking-widest text-sm text-gray-400'
+        >
           Welcome to
           <span className='text-white font-medium'> Frontend Solutions</span>
-        </p>
+        </motion.p>
 
-        <h1 className='text-4xl md:text-5xl font-bold leading-tight'>
+        <motion.h1
+          initial={{ opacity: 0, y: 40 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.2 }}
+          className='text-4xl md:text-5xl font-bold leading-tight'
+        >
           Hi, I’m <span className='text-orange-400'>Md. Nesad</span> <br />a{' '}
           <span className='text-white'>{displayedText}.</span>
-        </h1>
+        </motion.h1>
 
-        <p className='text-gray-300 leading-relaxed'>
+        <motion.p
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.4 }}
+          className='text-gray-300 leading-relaxed'
+        >
           I design and develop intuitive, visually engaging digital experiences
           and build frontend solutions that connect users with brands.
-        </p>
+        </motion.p>
 
         {/* Contact Button */}
-        <button
+        <motion.button
           onClick={() => handleScroll('contact')}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.5, delay: 0.5 }}
           className='flex items-center gap-2 bg-[#212428] shadow-md shadow-[#63636352] px-6 py-3 rounded-md text-[#EE4036] font-semibold hover:scale-105 transition'
         >
           Contact me <ArrowRight size={18} />
-        </button>
+        </motion.button>
 
         {/* Skills & Socials */}
         <div className='mt-8 flex flex-col md:flex-row items-start md:items-center gap-10'>
@@ -88,8 +107,11 @@ export default function HeroArea() {
             </p>
             <div className='flex gap-3'>
               {[figma, xd, photoshop, react, next].map((icon, idx) => (
-                <div
+                <motion.div
                   key={idx}
+                  initial={{ opacity: 0, scale: 0.8 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  transition={{ duration: 0.6, delay: 0.8 + idx * 0.2 }}
                   className='bg-[#191a1d] p-3 rounded-lg w-14 h-14 flex items-center justify-center 
                      transition-transform duration-300 hover:scale-110 hover:shadow-md hover:shadow-[#63636352]'
                 >
@@ -100,7 +122,7 @@ export default function HeroArea() {
                     height={34}
                     className='object-contain'
                   />
-                </div>
+                </motion.div>
               ))}
             </div>
           </div>
@@ -120,9 +142,12 @@ export default function HeroArea() {
                   link: 'https://www.facebook.com',
                 },
               ].map((social, idx) => (
-                <a
+                <motion.a
                   key={idx}
                   href={social.link}
+                  initial={{ opacity: 0, scale: 0.8 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  transition={{ duration: 0.6, delay: 1 + idx * 0.2 }}
                   target='_blank'
                   rel='noopener noreferrer'
                   className='w-14 h-14 flex items-center justify-center bg-[#212428] rounded-lg
@@ -133,7 +158,7 @@ export default function HeroArea() {
                     alt={social.alt}
                     className='object-contain'
                   />
-                </a>
+                </motion.a>
               ))}
             </div>
           </div>
