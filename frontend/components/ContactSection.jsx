@@ -2,9 +2,10 @@
 import contact from "@/public/contact.png";
 import Image from "next/image";
 import fiverr from "@/public/HeroImage/fiverr.png";
-import upwork from "@/public/HeroImage/upwork.png";
-import facebook from "@/public/HeroImage/facebook.png";
+import linkedin from "@/public/HeroImage/linkedin.png";
+import whatsApp from "@/public/HeroImage/whatsapp.png";
 import { FiChevronDown } from "react-icons/fi";
+import { motion } from "framer-motion";
 export default function ContactSection() {
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -118,28 +119,46 @@ export default function ContactSection() {
           <p className="text-gray-400 mb-6">Email: nesadm26@gmail.com</p>
 
           <p className="text-gray-400 mb-2">FIND WITH ME</p>
-          <div className="flex space-x-6 mt-2">
-            <a
-              href="https://www.upwork.com"
-              target="_blank"
-              className="bg-green-500 w-10 h-10 rounded flex items-center justify-center hover:scale-110 hover:shadow-md hover:shadow-[#63636352] transition duration-300"
-            >
-              <Image src={upwork} alt="upwork" />
-            </a>
-            <a
-              href="https://www.fiverr.com"
-              target="_blank"
-              className="bg-green-500 w-10 h-10 rounded flex items-center justify-center hover:scale-110 hover:shadow-md hover:shadow-[#63636352] transition duration-300"
-            >
-              <Image src={fiverr} alt="fiverr" />
-            </a>
-            <a
-              href="https://www.facebook.com"
-              target="_blank"
-              className="bg-[#1877f2] w-10 h-10 rounded flex items-center justify-center hover:scale-110 hover:shadow-md hover:shadow-[#63636352] transition duration-300"
-            >
-              <Image src={facebook} alt="facebook" />
-            </a>
+          <div className="md:mt-1">
+            <div className="flex gap-3">
+              {[
+                {
+                  src: linkedin,
+                  alt: "linkedin icon",
+                  link: "https://www.linkedin.com/in/md-nesad-30b5bb286/",
+                },
+                {
+                  src: fiverr,
+                  alt: "Fiverr",
+                  link: "https://www.fiverr.com/sah_ahamad?public_mode=true",
+                },
+                {
+                  src: whatsApp,
+                  alt: "whatsApp icon",
+                  link: "https://wa.me/+8801300113023",
+                },
+              ].map((social, idx) => {
+                return (
+                  <motion.a
+                    key={idx}
+                    href={social.link}
+                    initial={{ opacity: 0, scale: 0.8 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    transition={{ duration: 0.6, delay: 1 + idx * 0.2 }}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={`w-14 h-14 flex items-center justify-center bg-[#212428] rounded-lg
+                     transition-transform duration-300 hover:scale-110 hover:shadow-md hover:shadow-[#63636352]`}
+                  >
+                    <Image
+                      src={social.src}
+                      alt={social.alt}
+                      className="object-contain"
+                    />
+                  </motion.a>
+                );
+              })}
+            </div>
           </div>
         </div>
       </div>

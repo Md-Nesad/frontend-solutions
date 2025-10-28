@@ -1,186 +1,187 @@
-import bravery from '@/public/clientPicture/bravery.png'
-import edges from '@/public/clientPicture/edges.png'
-import sesame from '@/public/clientPicture/sesame.png'
-import earrins from '@/public/clientPicture/earrins.png'
-import ledger from '@/public/clientPicture/ledger.png'
-import california from '@/public/clientPicture/califarnia.png'
-import teplo from '@/public/clientPicture/teplo.png'
-import harry from '@/public/clientPicture/harry.png'
-import alexander from '@/public/persons/Alexander Carter.jpg'
-import sophia from '@/public/persons/Sophia Martinez.jpg'
-import benjamin from '@/public/persons/Benjamin Thomps.jpg'
-import nathan from '@/public/persons/Nathan Roberts.jpg'
-import samuel from '@/public/persons/Samuel Lewis.jpg'
-import olivia from '@/public/persons/Olivia Scott.jpg'
-import daniel from '@/public/persons/Daniel Harris.jpg'
-import isabella from '@/public/persons/Isabella Clark.jpg'
+import bravery from "@/public/clientPicture/bravery.png";
+import edges from "@/public/clientPicture/edges.png";
+import sesame from "@/public/clientPicture/sesame.png";
+import earrins from "@/public/clientPicture/earrins.png";
+import ledger from "@/public/clientPicture/ledger.png";
+import california from "@/public/clientPicture/califarnia.png";
+import teplo from "@/public/clientPicture/teplo.png";
+import harry from "@/public/clientPicture/harry.png";
+import alexander from "@/public/persons/Alexander Carter.jpg";
+import sophia from "@/public/persons/Sophia Martinez.jpg";
+import benjamin from "@/public/persons/Benjamin Thomps.jpg";
+import nathan from "@/public/persons/Nathan Roberts.jpg";
+import samuel from "@/public/persons/Samuel Lewis.jpg";
+import olivia from "@/public/persons/Olivia Scott.jpg";
+import daniel from "@/public/persons/Daniel Harris.jpg";
+import isabella from "@/public/persons/Isabella Clark.jpg";
 
 export const clients = [
   {
     id: 1,
     logo: bravery,
-    name: 'Alexander Carter',
-    role: 'Product Manager',
+    name: "Alexander Carter",
+    role: "Product Manager",
     avatar: alexander,
   },
   {
     id: 2,
     logo: edges,
-    name: 'Sophia Martinez',
-    role: 'Marketing Director',
+    name: "Sophia Martinez",
+    role: "Marketing Director",
     avatar: sophia,
   },
   {
     id: 3,
     logo: sesame,
-    name: 'Benjamin Thomps',
-    role: 'Ceo & Funder',
+    name: "Benjamin Thomps",
+    role: "Ceo & Funder",
     avatar: benjamin,
   },
   {
     id: 4,
     logo: earrins,
-    name: 'Nathan Roberts',
-    role: 'Creative Director',
+    name: "Nathan Roberts",
+    role: "Creative Director",
     avatar: nathan,
   },
   {
     id: 5,
     logo: ledger,
-    name: 'Samuel Lewis',
-    role: 'Software Engineer',
+    name: "Samuel Lewis",
+    role: "Software Engineer",
     avatar: samuel,
   },
   {
     id: 6,
     logo: california,
-    name: 'Olivia Scott',
-    role: 'Product Designer',
+    name: "Olivia Scott",
+    role: "Product Designer",
     avatar: olivia,
   },
   {
     id: 7,
     logo: teplo,
-    name: 'Daniel Harris',
-    role: 'Ceo & Funder',
+    name: "Daniel Harris",
+    role: "Ceo & Funder",
     avatar: daniel,
   },
   {
     id: 8,
     logo: harry,
-    name: 'Isabella Clark',
-    role: 'UX Lead',
+    name: "Isabella Clark",
+    role: "UX Lead",
     avatar: isabella,
   },
-]
+];
 
 export const services = [
   {
-    title: 'Figma to React, Next.js',
-    desc: 'Convert your Figma or design files into fully functional, pixel-perfect React or Next.js applications with responsive UI and clean code.',
+    title: "Figma to React, Next.js",
+    desc: "Convert your Figma or design files into fully functional, pixel-perfect React or Next.js applications with responsive UI and clean code.",
   },
   {
-    title: 'Landing page',
-    desc: 'High-converting, SEO-friendly landing pages built with modern design and fast performance to boost your sales and customer engagement.',
+    title: "Landing page",
+    desc: "High-converting, SEO-friendly landing pages built with modern design and fast performance to boost your sales and customer engagement.",
   },
   {
-    title: 'Business website',
-    desc: 'Professional, responsive websites tailored for your business, helping you build trust, showcase services, and attract potential clients online.',
+    title: "Business website",
+    desc: "Professional, responsive websites tailored for your business, helping you build trust, showcase services, and attract potential clients online.",
   },
 
   {
-    title: 'Dashboard (Admin panel)',
-    desc: 'Custom dashboards and admin panels with real-time data visualization, easy management tools, and responsive design for smooth operations.',
+    title: "Dashboard (Admin panel)",
+    desc: "Custom dashboards and admin panels with real-time data visualization, easy management tools, and responsive design for smooth operations.",
   },
   {
-    title: 'Wireframes & Prototypes',
-    desc: 'Bring your ideas to life with interactive wireframes and prototypes, helping you visualize the flow and validate concepts before full development.',
+    title: "Wireframes & Prototypes",
+    desc: "Bring your ideas to life with interactive wireframes and prototypes, helping you visualize the flow and validate concepts before full development.",
   },
   {
-    title: 'API Integration',
-    desc: 'Seamless integration of third-party APIs (payment, maps, authentication, etc.) to extend your website’s functionality and improve user experience.',
+    title: "API Integration",
+    desc: "Seamless integration of third-party APIs (payment, maps, authentication and more...) to extend your website’s functionality and improve user experience.",
   },
-]
+];
 
 export const skills = {
-  design: [
-    { name: 'Figma', level: 100 },
-    { name: 'Adobe XD', level: 95 },
-    { name: 'Adobe In-Design', level: 90 },
-    { name: 'Photoshop', level: 80 },
-    { name: 'Illustrator', level: 85 },
+  frontend: [
+    { name: "Figma", level: 90 },
+    { name: "Tailwindcss", level: 95 },
+    { name: "JavaScript", level: 85 },
+    { name: "React.js", level: 90 },
+    { name: "Next.js", level: 90 },
   ],
-  development: [
-    { name: 'HTML 5', level: 100 },
-    { name: 'CSS 3', level: 100 },
-    { name: 'JavaScript', level: 100 },
-    { name: 'React.Js', level: 100 },
-    { name: 'Next.Js', level: 100 },
+  backend: [
+    { name: "Node.js", level: 80 },
+    { name: "Express.js", level: 90 },
+    { name: "MongoDB", level: 85 },
+    { name: "Next.js", level: 90 },
+    { name: "TypeScript", level: 85 },
   ],
-}
+};
 
 export const experienceData = {
   education: [
     {
-      title: 'Computer Science & Engineering',
-      institution: 'Uttora University (2017 – 2021)',
-      gpa: '3.85/4',
-      desc: 'The curriculum focused on developing strong problem-solving skills, programming expertise, and preparing students for careers in software development and IT sectors.',
+      title: "Frontend Developer",
+      company: "Frontend Solutions",
+      location: "Remote",
+      desc: "Developed responsive and high-performance UIs using React, Next.js, and Tailwind CSS. Focused on pixel-perfect design and smooth user experience.",
     },
+
     {
-      title: 'Higher Secondary Certificate',
-      institution: 'Uttora Collage (2014 – 2016)',
-      gpa: '4.50/5',
-      desc: 'Focused on Mathematics, Physics, and Chemistry to build analytical skills and prepare for higher studies in science and technology.',
+      title: "Course Instructor - Frontend Development",
+      company: "Pacific Computer Academy",
+      location: "On-site",
+      desc: "Taught students modern frontend technologies including HTML, CSS, JavaScript,React and Next.js. Developed practical exercises, projects, and assessments to help learners gain hands-on experience.",
     },
   ],
   jobs: [
     {
-      title: 'UI/UX Designer',
-      company: 'BUYCEX (2021 – 2022)',
-      location: 'India',
-      desc: 'Designed and optimized user-friendly interfaces, improved user experience across web and mobile platforms, and collaborated with developers to deliver client-focused digital solutions.',
+      title: "WordPress Developer",
+      company: "Freelance / Project Based",
+      location: "Remote",
+      desc: "Customized WordPress themes and plugins according to client needs. Optimized performance and SEO for better reach and user engagement.",
     },
     {
-      title: 'Frontend Developer',
-      company: 'Ipixel (2021 – 2025)',
-      location: 'Bangladesh',
-      desc: 'Developed and maintained responsive web applications using modern frameworks, optimized performance for scalability with cross-functional teams to deliver high-quality user experiences.',
+      title: "Project & Commission Based Work",
+      company: "Independent",
+      location: "Remote",
+      desc: "Delivered multiple freelance projects including portfolios, business websites, and eCommerce apps. Managed client communication, project planning, and delivery.",
     },
   ],
-}
+};
 
 export const testimonials = [
   {
     id: 1,
-    name: 'Michael Anderson',
-    role: 'Product Manager',
-    image: 'https://randomuser.me/api/portraits/men/32.jpg',
+    name: "Michael Anderson",
+    role: "Product Manager",
+    image: "https://randomuser.me/api/portraits/men/32.jpg",
     review:
-      'UI/UX and frontend development at Pixell BD is exceptional. He transformed our concepts into a seamless digital experience, delivering a polished product ahead of schedule.',
+      "UI/UX and frontend development at Pixell BD is exceptional. He transformed our concepts into a seamless digital experience, delivering a polished product ahead of schedule.",
   },
   {
     id: 2,
-    name: 'Sophia Carter',
-    role: 'CEO, StartupHub',
-    image: 'https://randomuser.me/api/portraits/women/44.jpg',
+    name: "Sophia Carter",
+    role: "CEO, StartupHub",
+    image: "https://randomuser.me/api/portraits/women/44.jpg",
     review:
-      'Working with Pixell BD was a game-changer for our business. The team is professional, creative, and always delivered beyond expectations.',
+      "Working with Pixell BD was a game-changer for our business. The team is professional, creative, and always delivered beyond expectations.",
   },
   {
     id: 3,
-    name: 'David Johnson',
-    role: 'Tech Lead, InnovateX',
-    image: 'https://randomuser.me/api/portraits/men/76.jpg',
+    name: "David Johnson",
+    role: "Tech Lead, InnovateX",
+    image: "https://randomuser.me/api/portraits/men/76.jpg",
     review:
-      'The frontend solutions were pixel-perfect, fast, and scalable. Highly recommended for anyone looking to elevate their digital products.',
+      "The frontend solutions were pixel-perfect, fast, and scalable. Highly recommended for anyone looking to elevate their digital products.",
   },
   {
     id: 4,
-    name: 'Emily Parker',
-    role: 'Marketing Director',
-    image: 'https://randomuser.me/api/portraits/women/68.jpg',
+    name: "Emily Parker",
+    role: "Marketing Director",
+    image: "https://randomuser.me/api/portraits/women/68.jpg",
     review:
-      'Pixell BD brought our vision to life with outstanding UI/UX design. The attention to detail and delivery speed were unmatched.',
+      "Pixell BD brought our vision to life with outstanding UI/UX design. The attention to detail and delivery speed were unmatched.",
   },
-]
+];

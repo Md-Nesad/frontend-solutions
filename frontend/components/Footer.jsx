@@ -85,7 +85,7 @@ export default function Footer() {
               </li>
               <li>
                 🌐 <span className="font-medium">Location:</span> <br />
-                Thakurgaon, Dhaka, Bangladesh
+                Thakurgaon, Bangladesh
               </li>
             </ul>
           </div>
