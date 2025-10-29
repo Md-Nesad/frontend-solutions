@@ -2,6 +2,7 @@
 import { projects } from "@/data/projects";
 import ProjectModal from "@/modal/ProjectModal";
 import { Arrow } from "@/public/Icon";
+import { AnimatePresence, motion } from "framer-motion";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import Image from "next/image";
 import { useState } from "react";
@@ -52,15 +53,25 @@ export default function PortfolioSection() {
             className="bg-[#212428] rounded-lg overflow-hidden shadow-[0_0_7px_rgba(255,255,255,0.3)] transition duration-300 relative group"
           >
             <div className="relative rounded-lg overflow-hidden flex-shrink-0">
-              <Image
-                src={item.images[currentIndexes[index]]}
-                alt="project"
-                width={900}
-                height={500}
-                placeholder="blur"
-                loading="lazy"
-                className="w-full h-72 object-cover rounded-lg hover:scale-105 transition duration-300 ease-in-out"
-              />
+              <AnimatePresence mode="wait">
+                <motion.div
+                  key={currentIndexes[index]}
+                  initial={{ opacity: 0, x: 30 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  exit={{ opacity: 0, x: -20 }}
+                  transition={{ duration: 0.3 }}
+                >
+                  <Image
+                    src={item.images[currentIndexes[index]]}
+                    alt="project"
+                    width={900}
+                    height={500}
+                    placeholder="blur"
+                    loading="lazy"
+                    className="w-full h-72 object-cover rounded-lg hover:scale-105 transition duration-300 ease-in-out"
+                  />
+                </motion.div>
+              </AnimatePresence>
 
               {/* Left Arrow */}
               <button

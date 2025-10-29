@@ -109,13 +109,15 @@ export const skills = {
     { name: "JavaScript", level: 85 },
     { name: "React.js", level: 90 },
     { name: "Next.js", level: 90 },
+    { name: "TypeScript", level: 85 },
   ],
   backend: [
+    { name: "Next.js", level: 90 },
     { name: "Node.js", level: 80 },
     { name: "Express.js", level: 90 },
     { name: "MongoDB", level: 85 },
-    { name: "Next.js", level: 90 },
-    { name: "TypeScript", level: 85 },
+    { name: "RESTful APIs", level: 95 },
+    { name: "JWT & Multer", level: 90 },
   ],
 };
 
