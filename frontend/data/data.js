@@ -158,7 +158,7 @@ export const testimonials = [
     role: "Product Manager",
     image: "https://randomuser.me/api/portraits/men/32.jpg",
     review:
-      "UI/UX and frontend development at Pixell BD is exceptional. He transformed our concepts into a seamless digital experience, delivering a polished product ahead of schedule.",
+      "Frontend development at Frontend Solutions is exceptional. He transformed our concepts into a seamless digital experience, delivering a polished product ahead of schedule.",
   },
   {
     id: 2,
@@ -166,7 +166,7 @@ export const testimonials = [
     role: "CEO, StartupHub",
     image: "https://randomuser.me/api/portraits/women/44.jpg",
     review:
-      "Working with Pixell BD was a game-changer for our business. The team is professional, creative, and always delivered beyond expectations.",
+      "Working with Frontend Solutions was a game-changer for our business. The team is professional, creative, and always delivered beyond expectations.",
   },
   {
     id: 3,
@@ -182,6 +182,6 @@ export const testimonials = [
     role: "Marketing Director",
     image: "https://randomuser.me/api/portraits/women/68.jpg",
     review:
-      "Pixell BD brought our vision to life with outstanding UI/UX design. The attention to detail and delivery speed were unmatched.",
+      "Frontend Solutions brought our vision to life with outstanding responsive and pixel-perfect design. The attention to detail and delivery speed were unmatched.",
   },
 ];
