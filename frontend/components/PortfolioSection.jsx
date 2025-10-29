@@ -4,7 +4,7 @@ import ProjectModal from "@/modal/ProjectModal";
 import { Arrow } from "@/public/Icon";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import Image from "next/image";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 export default function PortfolioSection() {
   const [selectedProject, setSelectedProject] = useState(null);
@@ -39,7 +39,7 @@ export default function PortfolioSection() {
         <p className="text-red-500 font-semibold text-sm uppercase mt-2">
           My Portfolio <span className="text-green-600">(Client Projects)</span>
         </p>
-        <h2 className="text-4xl md:text-4xl font-bold mt-2">
+        <h2 className="text-4xl md:text-4xl font-bold mt-2 max-sm:text-2xl">
           Design & Development Highlights
         </h2>
       </div>
@@ -59,17 +59,14 @@ export default function PortfolioSection() {
                 height={500}
                 placeholder="blur"
                 loading="lazy"
-                className="w-full h-72 object-cover rounded-lg"
+                className="w-full h-72 object-cover rounded-lg hover:scale-105 transition duration-300 ease-in-out"
               />
 
               {/* Left Arrow */}
               <button
-                className="
-      absolute top-1/2 left-1 -translate-y-1/2 bg-black/50 text-white p-2 rounded-full
-      opacity-0 translate-x-[-10px] pointer-events-none
+                className="absolute top-1/2 left-1 -translate-y-1/2 bg-black/50 text-white p-2 rounded-full opacity-0 translate-x-[-10px] pointer-events-none
       group-hover:opacity-100 group-hover:translate-x-0 group-hover:pointer-events-auto
-      transition-all duration-300 ease-in-out
-    "
+      transition-all duration-300 ease-in-out"
                 onClick={() => prevSlide(index, item)}
               >
                 <ChevronLeft />

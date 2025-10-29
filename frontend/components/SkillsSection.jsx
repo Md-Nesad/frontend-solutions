@@ -12,14 +12,14 @@ const SkillsSection = () => {
         <p className="text-[#EE4036] font-semibold mb-2">
           02+ YEARS OF EXPERIENCE
         </p>
-        <h2 className="text-3xl md:text-4xl font-bold mb-8">
+        <h2 className="text-3xl md:text-4xl font-bold mb-8 max-sm:text-2xl">
           Frontend and Full Stack excellence
         </h2>
 
         <div className="inline-flex rounded-md  p-2 mb-12  gap-2">
           <button
             onClick={() => setActiveTab("skills")}
-            className={`px-20 py-4 border border-gray-700 shadow-[0_0_5px_rgba(255,255,255,0.3)] rounded-md transition-all duration-300 text-lg ${
+            className={`px-20 max-sm:px-5 py-4 border border-gray-700 shadow-[0_0_5px_rgba(255,255,255,0.3)] rounded-md transition-all duration-300 text-lg max-sm:text-[16px] ${
               activeTab === "skills"
                 ? "bg-[#191C1F] text-[#F5EDFF]"
                 : "text-[#F5EDFFB2] bg-[#212428]"
@@ -29,7 +29,7 @@ const SkillsSection = () => {
           </button>
           <button
             onClick={() => setActiveTab("experience")}
-            className={`px-20 py-4 border border-gray-700 shadow-[0_0_5px_rgba(255,255,255,0.3)] rounded-md transition-all duration-300 text-lg ${
+            className={`px-20 max-sm:px-5 py-4 border border-gray-700 shadow-[0_0_5px_rgba(255,255,255,0.3)] rounded-md transition-all duration-300 text-lg max-sm:text-[16px] ${
               activeTab === "experience"
                 ? "bg-[#191C1F] text-[#F5EDFF]"
                 : "text-[#F5EDFFB2] bg-[#212428]"

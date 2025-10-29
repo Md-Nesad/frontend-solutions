@@ -74,7 +74,9 @@ export default function HeroArea() {
           className="text-4xl md:text-5xl font-bold leading-tight"
         >
           Hi, I’m <span className="text-orange-400">Md. Nesad</span> <br />a{" "}
-          <span className="text-white">{displayedText}.</span>
+          <span className="text-white max-sm:text-[28px]">
+            {displayedText}.
+          </span>
         </motion.h1>
 
         <motion.p

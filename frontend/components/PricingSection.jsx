@@ -7,7 +7,7 @@ export default function PricingSection() {
     <section className="bg-[#212428] text-white py-20 px-4 md:px-12 lg:px-42 mb-[2px]">
       <div className="text-center mb-16">
         <p className="text-red-500 text-sm font-semibold">My Pricing</p>
-        <h2 className="text-4xl md:text-4xl font-bold mt-2">
+        <h2 className="text-4xl max-sm:text-2xl md:text-4xl font-bold mt-2">
           Plans That Fit Your Project
         </h2>
       </div>
@@ -104,7 +104,7 @@ export default function PricingSection() {
         </div>
 
         {/* Premium Plan */}
-        <div className="bg-[#212428] rounded-lg px-8 pt-6 shadow-[0_0_5px_rgba(255,255,255,0.3)] hover:scale-105 hover:bg-[#1D1F22] transition duration-300">
+        <div className="bg-[#212428]  rounded-lg px-8 pb-8 pt-6 shadow-[0_0_5px_rgba(255,255,255,0.3)] hover:scale-105 hover:bg-[#1D1F22] transition duration-300">
           <h3 className="text-xl font-semibold mb-2 text-center border-b border-gray-700 pb-4">
             Premium Plan
           </h3>
