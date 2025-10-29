@@ -106,7 +106,7 @@ const SkillsSection = () => {
               {experienceData.education.map((item, i) => (
                 <div
                   key={i}
-                  className="bg-[#212428] hover:bg-[#191C1F] hover:scale-103 transition-all duration-300 p-5 mb-6 rounded-lg  shadow-[0_0_5px_rgba(255,255,255,0.3)] border-l-4 border-gray-700 relative h-45"
+                  className="bg-[#212428] hover:bg-[#191C1F] hover:scale-103 transition-all duration-300 p-5 mb-6 rounded-lg  shadow-[0_0_5px_rgba(255,255,255,0.3)] border-l-4 border-gray-700 relative h-45 max-sm:h-auto"
                 >
                   <div className="flex justify-between items-center">
                     <h4 className="text-[#F5EDFF] text-xl font-semibold">
@@ -133,7 +133,7 @@ const SkillsSection = () => {
               {experienceData.jobs.map((job, i) => (
                 <div
                   key={i}
-                  className="bg-[#212428] hover:bg-[#191C1F] hover:scale-103 transition-all duration-300 p-5 mb-6 rounded-lg  shadow-[0_0_5px_rgba(255,255,255,0.3)] border-l-4 border-gray-700 relative h-45"
+                  className="bg-[#212428] hover:bg-[#191C1F] hover:scale-103 transition-all duration-300 p-5 mb-6 rounded-lg  shadow-[0_0_5px_rgba(255,255,255,0.3)] border-l-4 border-gray-700 relative h-45 max-sm:h-auto"
                 >
                   <div className="flex justify-between items-center">
                     <h4 className="text-[#F5EDFF] text-xl font-semibold">

@@ -71,7 +71,7 @@ export default function Testimonials() {
       </div>
 
       {/* Review Card */}
-      <div className="relative bg-[#212428] mt-10 max-w-3xl h-60 max-sm:h-90 w-full p-8 rounded-lg shadow-[0_0_10px_rgba(255,255,255,0.2)] text-center">
+      <div className="relative bg-[#212428] mt-10 max-w-3xl h-60 max-sm:h-auto w-full p-8 rounded-lg shadow-[0_0_10px_rgba(255,255,255,0.2)] text-center">
         <span className="absolute top-3 left-4">
           <TopIcon />
         </span>
@@ -81,7 +81,7 @@ export default function Testimonials() {
         >
           {review}
         </p>
-        <span className="absolute bottom-3 right-4">
+        <span className="absolute bottom-3 max-sm:bottom-1 right-4">
           <BottomIcon />
         </span>
       </div>

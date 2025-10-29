@@ -17,7 +17,7 @@ export default function ContactSection() {
     >
       <div className="text-center mb-16">
         <p className="text-red-500 text-sm font-semibold">Contact Me</p>
-        <h2 className="text-4xl md:text-4xl text-[#F5EDFF] font-bold mt-2">
+        <h2 className="text-4xl max-sm:text-2xl md:text-4xl text-[#F5EDFF] font-bold mt-2">
           Let’s Build Something Great
         </h2>
       </div>

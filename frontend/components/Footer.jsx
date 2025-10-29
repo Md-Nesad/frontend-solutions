@@ -9,14 +9,14 @@ export default function Footer() {
       <footer className="bg-[#212428] text-white pt-16 pb-6 px-6 md:px-16 lg:px-42 mt-[2px]">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12 pb-10">
           {/* Left - Logo and Description */}
-          <div className="md:col-span-2 w-100">
+          <div className="md:col-span-2 md:w-100">
             <div className="flex items-center mb-4">
               <Image src={logo} alt="Logo" className="w-8 h-8 mr-2" />
-              <h2 className="text-[#FFFFFF] text-2xl font-semibold">
+              <h2 className="text-[#FFFFFF] text-2xl max-sm:text-lg font-semibold">
                 Frontend Solutions
               </h2>
             </div>
-            <p className="text-sm text-[#F5EDFFCC] leading-relaxed">
+            <p className="text-sm text-[#F5EDFFCC] leading-relaxed max-sm:text-justify">
               Frontend Solutions is a frontend and full-stack development
               studio. We specialize in crafting simple, beautiful, and
               user-friendly digital experiences that not only look great but
