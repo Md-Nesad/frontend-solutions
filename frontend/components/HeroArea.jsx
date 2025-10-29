@@ -74,7 +74,7 @@ export default function HeroArea() {
           className="text-4xl md:text-5xl font-bold leading-tight"
         >
           Hi, I’m <span className="text-orange-400">Md. Nesad</span> <br />a{" "}
-          <span className="text-white max-sm:text-[28px]">
+          <span className="text-white max-sm:text-[25px]">
             {displayedText}.
           </span>
         </motion.h1>
@@ -83,7 +83,7 @@ export default function HeroArea() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.4 }}
-          className="text-gray-300 leading-relaxed"
+          className="text-gray-300 leading-relaxed max-sm:text-justify"
         >
           Frontend-Focused Full Stack Developer | Available for Remote, Project
           & Commission-Based Work | Continuously Learning & Growing

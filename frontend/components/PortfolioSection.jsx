@@ -66,7 +66,7 @@ export default function PortfolioSection() {
               <button
                 className="absolute top-1/2 left-1 -translate-y-1/2 bg-black/50 text-white p-2 rounded-full opacity-0 translate-x-[-10px] pointer-events-none
       group-hover:opacity-100 group-hover:translate-x-0 group-hover:pointer-events-auto
-      transition-all duration-300 ease-in-out"
+      transition-all duration-300 ease-in-out max-sm:opacity-60 max-sm:translate-x-0 max-sm:pointer-events-auto"
                 onClick={() => prevSlide(index, item)}
               >
                 <ChevronLeft />
@@ -78,7 +78,7 @@ export default function PortfolioSection() {
       absolute top-1/2 right-1 -translate-y-1/2 bg-black/50 text-white p-2 rounded-full
       opacity-0 translate-x-[10px] pointer-events-none
       group-hover:opacity-100 group-hover:translate-x-0 group-hover:pointer-events-auto
-      transition-all duration-300 ease-in-out
+      transition-all duration-300 ease-in-out max-sm:opacity-60 max-sm:translate-x-0 max-sm:pointer-events-auto
     "
                 onClick={() => nextSlide(index, item)}
               >
@@ -110,13 +110,13 @@ export default function PortfolioSection() {
         {/* Portfolio Link */}
       </div>
       <div className="text-center mt-16">
-        <p className="text-gray-300 text-lg">
+        <p className="text-gray-300 text-lg max-sm:text-sm">
           To see my personal projects, visit{" "}
           <a
             href="https://nesad-portfolio-website.vercel.app/"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-[#EE4036] hover:text-red-500 underline transition-colors duration-300"
+            className="text-[#EE4036] hover:text-red-500 underline transition-colors duration-300 inline-block"
           >
             nesad-portfolio-website.vercel.app
           </a>

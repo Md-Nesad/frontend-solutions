@@ -48,7 +48,7 @@ export default function Services() {
               viewport={{ once: true }}
             />
             <h3 className="text-xl font-bold mb-4 mt-6">{service.title}</h3>
-            <p className="text-[#f5edffe4] text-md leading-relaxed">
+            <p className="text-[#f5edffe4] text-md leading-relaxed max-sm:text-justify">
               {service.desc}
             </p>
           </motion.div>

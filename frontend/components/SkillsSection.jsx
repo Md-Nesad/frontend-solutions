@@ -19,7 +19,7 @@ const SkillsSection = () => {
         <div className="inline-flex rounded-md  p-2 mb-12  gap-2">
           <button
             onClick={() => setActiveTab("skills")}
-            className={`px-20 max-sm:px-5 py-4 border border-gray-700 shadow-[0_0_5px_rgba(255,255,255,0.3)] rounded-md transition-all duration-300 text-lg max-sm:text-[16px] ${
+            className={`px-20 max-sm:px-5 py-4 border border-gray-700 shadow-[0_0_5px_rgba(255,255,255,0.3)] rounded-md transition-all duration-300 text-lg max-sm:text-[15px] ${
               activeTab === "skills"
                 ? "bg-[#191C1F] text-[#F5EDFF]"
                 : "text-[#F5EDFFB2] bg-[#212428]"
@@ -29,7 +29,7 @@ const SkillsSection = () => {
           </button>
           <button
             onClick={() => setActiveTab("experience")}
-            className={`px-20 max-sm:px-5 py-4 border border-gray-700 shadow-[0_0_5px_rgba(255,255,255,0.3)] rounded-md transition-all duration-300 text-lg max-sm:text-[16px] ${
+            className={`px-20 max-sm:px-5 py-4 border border-gray-700 shadow-[0_0_5px_rgba(255,255,255,0.3)] rounded-md transition-all duration-300 text-lg max-sm:text-[15px] ${
               activeTab === "experience"
                 ? "bg-[#191C1F] text-[#F5EDFF]"
                 : "text-[#F5EDFFB2] bg-[#212428]"
