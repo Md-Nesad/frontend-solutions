@@ -103,6 +103,18 @@ export default function PortfolioSection() {
                 {item.subtitle}
               </p>
 
+              {/* 🔗 Project Link Button */}
+              {item.link && (
+                <a
+                  href={item.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-sm text-red-400 hover:text-red-500 underline absolute bottom-5 right-5 transition-colors duration-300"
+                >
+                  Visit Project
+                </a>
+              )}
+
               {/* Hover Arrow */}
               <button
                 onClick={() => setSelectedProject(item)}
