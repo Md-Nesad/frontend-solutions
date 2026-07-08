@@ -3,13 +3,13 @@ import Image from "next/image";
 import { ArrowRight, Download } from "lucide-react";
 import profileImg from "@/public/HeroImage/heroImage.png";
 import figma from "@/public/HeroImage/figma.png";
-import xd from "@/public/HeroImage/tailwind.png";
+import javaScript from "@/public/HeroImage/javascript.png";
 import react from "@/public/HeroImage/react.png";
-import next from "@/public/HeroImage/next.png";
+import typeScript from "@/public/HeroImage/typescript.png";
 import nodeJs from "@/public/HeroImage/nodeJs.png";
-import fiverr from "@/public/HeroImage/discord.png";
-import linkedin from "@/public/HeroImage/linkedin.png";
-import whatsApp from "@/public/HeroImage/whatsapp.png";
+import mongodb from "@/public/HeroImage/mongodb.png";
+import postgreSql from "@/public/HeroImage/postgreSql.png";
+import docker from "@/public/HeroImage/docker.png";
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 
@@ -32,6 +32,17 @@ export default function HeroArea() {
     link.click();
     document.body.removeChild(link);
   };
+
+  const skills = [
+    { name: "Figma", icon: figma },
+    { name: "JavaScript", icon: javaScript },
+    { name: "React", icon: react },
+    { name: "TypeScript", icon: typeScript },
+    { name: "Node.js", icon: nodeJs },
+    { name: "MongoDB", icon: mongodb },
+    { name: "PostgreSQL", icon: postgreSql },
+    { name: "Docker", icon: docker },
+  ];
 
   useEffect(() => {
     const speed = deleting ? 40 : 50; // typing/deleting speed
@@ -137,8 +148,17 @@ export default function HeroArea() {
             <p className="text-xs tracking-widest text-gray-400 mb-3">
               BEST SKILL ON
             </p>
-            <div className="flex gap-3">
-              {[figma, xd, react, next, nodeJs].map((icon, idx) => (
+            {/* <div className="flex gap-3">
+              {[
+                figma,
+                javaScript,
+                react,
+                typeScript,
+                nodeJs,
+                mongodb,
+                postgreSql,
+                docker,
+              ].map((icon, idx) => (
                 <motion.div
                   key={idx}
                   initial={{ opacity: 0, scale: 0.8 }}
@@ -154,6 +174,61 @@ export default function HeroArea() {
                     height={40}
                     className="object-cover"
                   />
+                </motion.div>
+              ))}
+            </div> */}
+            <div className="flex gap-3">
+              {skills.map((skill, idx) => (
+                <motion.div
+                  key={idx}
+                  initial={{ opacity: 0, scale: 0.8 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  transition={{ duration: 0.6, delay: 0.8 + idx * 0.2 }}
+                  className="relative group"
+                >
+                  {/* Tooltip */}
+                  <div
+                    className="
+          absolute -top-10 left-1/2 -translate-x-1/2
+          whitespace-nowrap rounded-md
+          bg-orange-400 px-3 py-1 text-xs font-medium text-white
+          opacity-0 scale-95
+          transition-all duration-200
+          group-hover:opacity-100 group-hover:scale-100
+          pointer-events-none
+        "
+                  >
+                    {skill.name}
+
+                    {/* Arrow */}
+                    <div
+                      className="
+            absolute left-1/2 top-full
+            -translate-x-1/2
+            border-4 border-transparent
+            border-t-orange-400
+          "
+                    />
+                  </div>
+
+                  {/* Icon */}
+                  <div
+                    className="
+          bg-[#191a1d] p-3 rounded-lg w-14 h-14
+          flex items-center justify-center
+          transition-all duration-300
+          hover:scale-110 hover:shadow-md
+          hover:shadow-[#63636352]
+        "
+                  >
+                    <Image
+                      src={skill.icon}
+                      alt={skill.name}
+                      width={40}
+                      height={40}
+                      className="object-cover"
+                    />
+                  </div>
                 </motion.div>
               ))}
             </div>
