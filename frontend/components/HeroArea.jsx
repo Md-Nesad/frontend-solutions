@@ -1,6 +1,6 @@
 "use client";
 import Image from "next/image";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Download } from "lucide-react";
 import profileImg from "@/public/HeroImage/heroImage.png";
 import figma from "@/public/HeroImage/figma.png";
 import xd from "@/public/HeroImage/tailwind.png";
@@ -15,19 +15,23 @@ import { motion } from "framer-motion";
 
 export default function HeroArea() {
   const titles = [
-    "Frontend Engineer",
-    "UI Engineer",
-    "React.js",
-    "Next.js",
-    "TypeScript",
-    "Redux",
-    "Zustand",
-    "TanStack Query"
+    "Frontend Developer",
+    "Backend Developer",
+    "Full Stack Developer",
   ];
   const [displayedText, setDisplayedText] = useState("");
   const [titleIndex, setTitleIndex] = useState(0);
   const [charIndex, setCharIndex] = useState(0);
   const [deleting, setDeleting] = useState(false);
+
+  const downloadResume = () => {
+    const link = document.createElement("a");
+    link.href = "/resume/Nesad-resume.pdf";
+    link.download = "Nesad-resume.pdf";
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
 
   useEffect(() => {
     const speed = deleting ? 40 : 50; // typing/deleting speed
@@ -72,7 +76,7 @@ export default function HeroArea() {
           className="uppercase tracking-widest text-sm text-gray-400"
         >
           Welcome to
-          <b className="text-white"> Frontend Solutions</b>
+          <b className="text-white"> Full Stack Solutions</b>
         </motion.p>
 
         <motion.h1
@@ -81,7 +85,7 @@ export default function HeroArea() {
           transition={{ duration: 0.8, delay: 0.2 }}
           className="text-4xl md:text-5xl font-bold leading-tight"
         >
-          Hi, I am <span className="text-orange-400">Md. Nesad</span>
+          Hi, This is <span className="text-orange-400">Md. Nesad</span>
           <br />
           <span className="text-white max-sm:text-[25px]">
             {displayedText}.
@@ -94,24 +98,38 @@ export default function HeroArea() {
           transition={{ duration: 0.8, delay: 0.4 }}
           className="text-gray-300 leading-relaxed max-sm:text-justify"
         >
-          Before collaborating with clients, I take the time to understand their requirements, business goals, and target audience. I analyze these and deliver effective solutions using the right technologies and tools.
-
-I ensure timely delivery, maintain clear communication, and provide regular updates throughout the process—focusing on reliability and client satisfaction.
+          Before collaborating with clients, I take the time to understand their
+          requirements, business goals, and target audience. I analyze these and
+          deliver effective solutions using the right technologies and tools. I
+          ensure timely delivery, maintain clear communication, and provide
+          regular updates throughout the process—focusing on reliability and
+          client satisfaction.
         </motion.p>
 
         {/* Contact Button */}
-        <motion.button
-          onClick={() => {
-            window.open("https://wa.me/01300113023", "_blank");
-          }}
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.5, delay: 0.5 }}
-          className="flex items-center gap-2 bg-[#212428] shadow-md shadow-[#63636352] px-6 py-3 rounded-md text-[#EE4036] font-semibold hover:scale-105 transition"
-        >
-          Contact me <ArrowRight size={18} />
-        </motion.button>
+        <div className="flex gap-10">
+          <motion.button
+            onClick={() => {
+              window.open("https://wa.me/01300113023", "_blank");
+            }}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.5, delay: 0.5 }}
+            className="flex items-center gap-2 bg-[#212428] shadow-md shadow-[#63636352] px-6 py-3 rounded-md text-[#EE4036] font-semibold hover:scale-105 transition"
+          >
+            Contact me <ArrowRight size={18} />
+          </motion.button>
 
+          <motion.button
+            onClick={downloadResume}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.5, delay: 0.5 }}
+            className="flex items-center gap-2 bg-[#212428] shadow-md shadow-[#63636352] px-6 py-3 rounded-md text-[#EE4036] font-semibold hover:scale-105 transition"
+          >
+            Download Resume <Download size={18} />
+          </motion.button>
+        </div>
         {/* Skills & Socials */}
         <div className="mt-8 flex flex-col md:flex-row items-start md:items-center gap-10">
           {/* Skills */}
@@ -142,7 +160,7 @@ I ensure timely delivery, maintain clear communication, and provide regular upda
           </div>
 
           {/* Social Links */}
-          <div className="md:mt-1">
+          {/* <div className="md:mt-1">
             <p className="text-xs tracking-widest text-gray-400 mb-2">
               FIND WITH ME
             </p>
@@ -188,7 +206,7 @@ I ensure timely delivery, maintain clear communication, and provide regular upda
                 );
               })}
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
 

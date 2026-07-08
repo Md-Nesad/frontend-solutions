@@ -7,7 +7,7 @@ const SkillsSection = () => {
   const [activeTab, setActiveTab] = useState("skills");
 
   return (
-    <section className="bg-[#212428] text-white py-16 px-6 md:px-16 lg:px-42 mt-1 mb-[2px]">
+    <section className="bg-[#212428] text-white py-16 px-6 md:px-16 lg:px-42 my-[2px]">
       <div className=" mx-auto text-center">
         <motion.div
           initial={{ opacity: 0, y: 50 }}

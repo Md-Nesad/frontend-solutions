@@ -145,7 +145,7 @@ export default function PortfolioSection() {
         ))}
         {/* Portfolio Link */}
       </motion.div>
-      <div className="text-center mt-16">
+      {/* <div className="text-center mt-16">
         <p className="text-gray-300 text-lg max-sm:text-sm">
           To see my personal projects, visit{" "}
           <a
@@ -157,7 +157,7 @@ export default function PortfolioSection() {
             nesad-portfolio-website.vercel.app
           </a>
         </p>
-      </div>
+      </div> */}
 
       {/* Modal */}
       {selectedProject && (

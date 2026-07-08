@@ -22,7 +22,7 @@ export default function Navbar() {
 
   useEffect(() => {
     const handleScrollSpy = () => {
-      // 👇 Always detect home when near top
+      // Always detect home when near top
       if (window.scrollY < 200) {
         setActive("home");
         return;
@@ -53,7 +53,7 @@ export default function Navbar() {
       >
         <Image src={Logo} alt="Logo" width={40} height={40} />
         <h1 className="text-orange-400 font-bold text-lg">
-          Frontend <span className="text-white">Solutions</span>
+          Full Stack <span className="text-white">Solutions</span>
         </h1>
       </div>
 

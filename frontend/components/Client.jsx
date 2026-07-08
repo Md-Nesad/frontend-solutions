@@ -17,7 +17,7 @@ export default function Clients() {
           Popular Client
         </h4>
         <h2 className="text-3xl max-sm:text-2xl md:text-4xl font-bold mb-10">
-          Our Amazing Clients
+          My Amazing Clients
         </h2>
       </motion.div>
 

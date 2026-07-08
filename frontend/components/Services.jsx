@@ -6,7 +6,7 @@ export default function Services() {
   return (
     <section
       id="services"
-      className="bg-[#212428] text-white px-6 md:px-20 lg:px-42 pt-11 pb-20 mt-1"
+      className="bg-[#212428] text-white px-6 md:px-20 lg:px-42 pt-11 pb-20 my-[2px]"
     >
       {/* Section Header */}
       <motion.div
@@ -20,7 +20,7 @@ export default function Services() {
           My Services
         </p>
         <h2 className="text-3xl md:text-3xl font-bold max-sm:text-2xl">
-          Frontend & Web app Development
+          Frontend & Full Stack Development
         </h2>
       </motion.div>
 

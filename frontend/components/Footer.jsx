@@ -13,11 +13,17 @@ export default function Footer() {
             <div className="flex items-center mb-4">
               <Image src={logo} alt="Logo" className="w-10 h-10 mr-4" />
               <h2 className=" text-2xl max-sm:text-lg font-semibold">
-                Frontend Solutions
+                Full Stack Solutions
               </h2>
             </div>
             <p className="text-sm text-[#F5EDFFCC] leading-relaxed max-sm:text-justify">
-              I’m a results-driven, frontend-focused full-stack engineer specializing in complex UI and frontend development. I build scalable, high-performance digital products that help businesses grow, using clean, maintainable code and modern technologies. With strong attention to detail and a user-centered mindset, I deliver responsive, optimized, and business-focused solutions. Let's start and grow together. Feel free to reach out me please.
+              I’m a results-driven, Full Stack developer specializing in complex
+              Frontend and Backend development. I build scalable,
+              high-performance digital products that help businesses grow, using
+              clean, maintainable code and modern technologies. With strong
+              attention to detail and a user-centered mindset, I deliver
+              responsive, optimized, and business-focused solutions. Let's start
+              and grow together. Feel free to reach out me please.
             </p>
           </div>
 

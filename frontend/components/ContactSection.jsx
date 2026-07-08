@@ -133,7 +133,7 @@ export default function ContactSection() {
           <h3 className="text-lg font-semibold mb-1 text-[#F5EDFFCC]">
             Md. Nesad
           </h3>
-          <p className="text-gray-400 mb-4">Mid Level Frontend Engineer</p>
+          <p className="text-gray-400 mb-4">Full Stack Developer</p>
           <p className="text-gray-400 mb-4">
             Digital solutions for a connected world. We specialize in crafting
             seamless digital experiences that drive results. Let's create

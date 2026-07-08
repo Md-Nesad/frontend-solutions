@@ -24,7 +24,7 @@ export default function Testimonials() {
   return (
     <section
       id="testimonial"
-      className="bg-[#212428] text-white py-16 px-6 flex flex-col items-center mt-1"
+      className="bg-[#212428] text-white py-16 px-6 flex flex-col items-center my-[2px]"
     >
       <motion.div
         initial={{ opacity: 0, y: 50 }}
@@ -32,7 +32,7 @@ export default function Testimonials() {
         transition={{ duration: 0.6 }}
         viewport={{ once: true }}
       >
-        <h4 className="text-[#EE4036] uppercase text-sm tracking-wider font-semibold mb-2 mt-4.5">
+        <h4 className="text-[#EE4036] uppercase text-sm text-center tracking-wider font-semibold mb-2 mt-4.5">
           Testimonials
         </h4>
         <h2 className="text-3xl max-sm:text-2xl md:text-4xl font-bold mb-10 text-center">

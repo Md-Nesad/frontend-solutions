@@ -76,30 +76,57 @@ export const clients = [
 
 export const services = [
   {
-    title: "Frontend Development",
-    desc: "Modern, responsive, and pixel-perfect user interfaces built with React, Next.js, and TypeScript. Focused on performance, accessibility, and seamless user experience.",
+    title: "Custom Web Application Development",
+    desc: "Build secure, scalable, and high-performance web applications tailored to your business requirements using modern full-stack technologies and industry best practices.",
   },
   {
-    title: "Web Application Development",
-    desc: "Scalable and production-ready web applications with clean architecture, secure authentication, and efficient state management.",
+    title: "Custom Business Software Development",
+    desc: "Develop business management systems, internal tools, CRM, ERP, dashboards, booking platforms, and workflow automation solutions that improve operational efficiency.",
   },
   {
-    title: "UI Implementation from Design",
-    desc: "Accurate conversion of Figma or design files into fully functional, responsive web interfaces with attention to detail and consistency.",
+    title: "Full-Stack Development",
+    desc: "Deliver end-to-end solutions, from responsive frontend interfaces to robust backend APIs, databases, authentication, and cloud deployment.",
   },
   {
-    title: "Performance Optimization",
-    desc: "Improving loading speed, Core Web Vitals, SEO structure, and overall frontend performance for better user engagement and ranking.",
+    title: "API Development & System Integration",
+    desc: "Design and integrate secure REST APIs, third-party services, payment gateways, authentication providers, and external business platforms for seamless connectivity.",
   },
   {
-    title: "API Integration",
-    desc: "Seamless integration of REST APIs, third-party services, authentication systems, and backend connectivity for dynamic applications.",
+    title: "UI Implementation & Frontend Engineering",
+    desc: "Transform Figma and design prototypes into responsive, accessible, and pixel-perfect user interfaces with a strong focus on performance and user experience.",
   },
   {
-    title: "Website Maintenance & Enhancement",
-    desc: "Ongoing improvements, feature additions, bug fixing, and UI refinements to keep your web product modern and scalable.",
+    title: "Application Maintenance & Scaling",
+    desc: "Provide long-term support through feature development, bug fixing, performance optimization, security improvements, and scalable architecture enhancements.",
   },
 ];
+
+// export const services = [
+//   {
+//     title: "Custom Business Software",
+//     desc: "Tailored software solutions for businesses including CRM, ERP, HRM, inventory, POS, booking systems, and internal management platforms.",
+//   },
+//   {
+//     title: "SaaS Product Development",
+//     desc: "Build scalable SaaS platforms with secure authentication, subscription workflows, multi-tenant architecture, and modern cloud-ready infrastructure.",
+//   },
+//   {
+//     title: "Web Application Development",
+//     desc: "Develop fast, secure, and scalable web applications with modern frontend, backend, database, and API architecture.",
+//   },
+//   {
+//     title: "API & Third-Party Integrations",
+//     desc: "Develop secure APIs and integrate payment gateways, authentication, cloud services, AI services, and external business platforms.",
+//   },
+//   {
+//     title: "Frontend Development",
+//     desc: "Create responsive, accessible, and high-performance user interfaces from Figma designs using modern frontend technologies and best practices.",
+//   },
+//   {
+//     title: "Maintenance & Product Scaling",
+//     desc: "Continuous product improvement through feature development, code refactoring, performance optimization, security updates, and long-term technical support.",
+//   },
+// ];
 
 export const skills = {
   frontend: [
@@ -109,15 +136,20 @@ export const skills = {
     { name: "React.js", level: 90 },
     { name: "Next.js", level: 90 },
     { name: "TypeScript", level: 85 },
+    { name: "Redux", level: 90 },
+    { name: "TenStack Query", level: 85 },
+    { name: "Shadcn/UI", level: 95 },
   ],
   backend: [
     { name: "Node.js", level: 90 },
     { name: "Express.js", level: 95 },
     { name: "MongoDB", level: 90 },
-    { name: "RESTful", level: 95 },
-    { name: "Multer", level: 95 },
-    { name: "CI/CD Pipelines", level: 87 },
-    // { name: "Socket.io", level: 90 },
+    { name: "PostgreSQL", level: 87 },
+    { name: "Prisma", level: 90 },
+    { name: "REST API", level: 95 },
+    { name: "Redis", level: 95 },
+    { name: "Socket", level: 90 },
+    { name: "Docker", level: 90 },
   ],
 };
 
@@ -139,10 +171,10 @@ export const experienceData = {
   ],
   jobs: [
     {
-      title: "WordPress Developer",
+      title: "Full Stack Developer",
       company: "Freelance / Project Based",
       location: "Remote",
-      desc: "Customized WordPress themes and plugins according to client needs. Optimized performance and SEO for better reach and user engagement.",
+      desc: "Developed high performance web application and custom business software for different different client's business needs that help them to turn their business from offline to online.",
     },
     {
       title: "Project & Commission Based Work",
@@ -160,7 +192,7 @@ export const testimonials = [
     role: "Product Manager",
     image: "https://randomuser.me/api/portraits/men/32.jpg",
     review:
-      "Frontend development at Frontend Solutions is exceptional. The team transformed our concepts into a seamless digital experience, delivering a polished product ahead of schedule.",
+      "Full Stack development at Full Stack Solutions is exceptional. The team transformed our concepts into a seamless digital experience, delivering a polished product ahead of schedule.",
   },
   {
     id: 2,
@@ -168,7 +200,7 @@ export const testimonials = [
     role: "CEO, StartupHub",
     image: "https://randomuser.me/api/portraits/women/44.jpg",
     review:
-      "Working with Frontend Solutions was a game-changer for our business. The team is professional, creative, and always delivered beyond expectations.",
+      "Working with Full Stack Solutions was a game-changer for our business. The team is professional, creative, and always delivered beyond expectations.",
   },
   {
     id: 3,
@@ -176,7 +208,7 @@ export const testimonials = [
     role: "Tech Lead, InnovateX",
     image: "https://randomuser.me/api/portraits/men/76.jpg",
     review:
-      "Frontend Solutions were pixel-perfect, fast, and scalable. Highly recommended for anyone looking to elevate their digital products.",
+      "Full Stack Solutions were pixel-perfect, fast, and scalable. Highly recommended for anyone looking to elevate their digital products.",
   },
   {
     id: 4,
@@ -184,6 +216,6 @@ export const testimonials = [
     role: "Marketing Director",
     image: "https://randomuser.me/api/portraits/women/68.jpg",
     review:
-      "Frontend Solutions brought our vision to life with outstanding responsive and pixel-perfect design. The attention to detail and delivery speed were unmatched.",
+      "Full Stack Solutions brought our vision to life with outstanding responsive and pixel-perfect design. The attention to detail and delivery speed were unmatched.",
   },
 ];
