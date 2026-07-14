@@ -95,7 +95,8 @@ export default function Footer() {
         {/* Bottom Footer */}
       </footer>
       <div className="text-center text-[#F5EDFFCC] text-sm py-6 mt-[1px] bg-[#212428]">
-        © {new Date().getFullYear()} Frontend Solutions. All rights reserved.
+        © {new Date().getFullYear()} Full Stack Solutions (Md. Nesad). All
+        rights reserved.
       </div>
     </>
   );
