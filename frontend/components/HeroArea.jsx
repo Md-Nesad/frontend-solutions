@@ -296,7 +296,7 @@ export default function HeroArea() {
           <Image
             src={profileImg}
             alt="Micel Brown"
-            className="rounded-lg shadow-lg"
+            className="rounded-lg shadow-md"
             priority
           />
         </div>
