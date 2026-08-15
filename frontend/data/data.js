@@ -81,15 +81,15 @@ export const services = [
   },
   {
     title: "Custom Business Software Development",
-    desc: "Develop business management systems, internal tools, CRM, ERP, dashboards, booking platforms, and workflow automation solutions that improve operational efficiency.",
+    desc: "Develop business management systems, internal tools, CRM, ERP, SASS, dashboards, booking platforms, and workflow automation solutions that improve operational efficiency.",
   },
   {
-    title: "Full-Stack Development",
+    title: "Full-Stack Web Development",
     desc: "Deliver end-to-end solutions, from responsive frontend interfaces to robust backend APIs, databases, authentication, and cloud deployment.",
   },
   {
     title: "API Development & System Integration",
-    desc: "Design and integrate secure REST APIs, third-party services, payment gateways, authentication providers, and external business platforms for seamless connectivity.",
+    desc: "Design, Develop and integrate secure REST APIs, third-party services, payment gateways, authentication providers, and external business platforms for seamless connectivity.",
   },
   {
     title: "UI Implementation & Frontend Engineering",
@@ -157,13 +157,13 @@ export const experienceData = {
   education: [
     {
       title: "Frontend Developer",
-      company: "Frontend Solutions",
+      company: "Nexora Soft",
       location: "Remote",
       desc: "Developed responsive and high-performance UIs using React, Next.js, and Tailwind CSS. Focused on pixel-perfect design and smooth user experience.",
     },
 
     {
-      title: "Course Instructor - Frontend Development",
+      title: "Course Instructor - Full Stack Developer",
       company: "Pacific Computer Academy",
       location: "On-site",
       desc: "Taught students modern frontend technologies including HTML, CSS, JavaScript,React and Next.js. Developed practical exercises, projects, and assessments to help learners gain hands-on experience.",
@@ -172,7 +172,7 @@ export const experienceData = {
   jobs: [
     {
       title: "Full Stack Developer",
-      company: "Freelance / Project Based",
+      company: "Nexora Soft",
       location: "Remote",
       desc: "Developed high performance web application and custom business software for different different client's business needs that help them to turn their business from offline to online.",
     },

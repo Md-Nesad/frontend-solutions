@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image";
-import { ArrowRight, Download } from "lucide-react";
-import profileImg from "@/public/HeroImage/heroImage.png";
+import { ArrowRight, BriefcaseBusiness, Download } from "lucide-react";
+import profileImg from "@/public/HeroImage/md_nesad.png";
 import figma from "@/public/HeroImage/figma.png";
 import javaScript from "@/public/HeroImage/javascript.png";
 import react from "@/public/HeroImage/react.png";
@@ -14,7 +14,11 @@ import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 
 export default function HeroArea() {
-  const titles = ["Frontend Developer", "Full Stack Developer"];
+  const titles = [
+    "Frontend Developer",
+    "Backend Developer",
+    "Full Stack Developer",
+  ];
   const [displayedText, setDisplayedText] = useState("");
   const [titleIndex, setTitleIndex] = useState(0);
   const [charIndex, setCharIndex] = useState(0);
@@ -105,12 +109,13 @@ export default function HeroArea() {
           transition={{ duration: 0.8, delay: 0.4 }}
           className="text-gray-300 leading-relaxed max-sm:text-justify"
         >
-          Before collaborating with clients, I take the time to understand their
-          requirements, business goals, and target audience. I analyze these and
-          deliver effective solutions using the right technologies and tools. I
-          ensure timely delivery, maintain clear communication, and provide
-          regular updates throughout the process—focusing on reliability and
-          client satisfaction.
+          Before collaborating with new projects, I take the time to understand
+          client's requirements, business goals, and target audience. I analyze
+          them, design maintainable architecture and scalable systems to deliver
+          effective solutions using the right technologies and tools. I ensure
+          timely delivery, maintain clear communication, and provide regular
+          updates throughout the process—focusing on reliability and client
+          satisfaction.
         </motion.p>
 
         {/* Contact Button */}
@@ -122,9 +127,9 @@ export default function HeroArea() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.5, delay: 0.5 }}
-            className="flex items-center gap-2 bg-[#212428] shadow-md shadow-[#63636352] px-6 py-3 rounded-md text-[#EE4036] font-semibold hover:scale-105 transition"
+            className="flex items-center gap-3 bg-[#212428] shadow-md shadow-[#63636352] px-6 py-3 rounded-md text-[#EE4036] font-semibold hover:scale-105 transition"
           >
-            Contact me <ArrowRight size={18} />
+            Hire me <BriefcaseBusiness size={18} />
           </motion.button>
 
           <motion.button
@@ -288,7 +293,7 @@ export default function HeroArea() {
         transition={{ duration: 0.5 }}
         className="mt-10 md:mt-0"
       >
-        <div className="relative w-[300px] md:w-[480px]">
+        <div className="relative w-[300px] md:w-[490px]">
           <Image
             src={profileImg}
             alt="Micel Brown"

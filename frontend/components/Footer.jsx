@@ -17,13 +17,12 @@ export default function Footer() {
               </h2>
             </div>
             <p className="text-sm text-[#F5EDFFCC] leading-relaxed max-sm:text-justify">
-              I’m a results-driven, Full Stack developer specializing in complex
-              Frontend and Backend development. I build scalable,
-              high-performance digital products that help businesses grow, using
-              clean, maintainable code and modern technologies. With strong
-              attention to detail and a user-centered mindset, I deliver
-              responsive, optimized, and business-focused solutions. Let's start
-              and grow together. Feel free to reach out me please.
+              I’m a results-driven **Full Stack Web & Software Developer**
+              specializing in building scalable, high-performance, and
+              user-focused digital solutions. I write clean, maintainable code
+              and turn ideas into reliable products that help businesses grow.{" "}
+              <br /> <br />
+              Let’s build and grow together. Feel free to reach out!
             </p>
           </div>
 
@@ -40,7 +39,7 @@ export default function Footer() {
                   }
                   className="hover:text-[#EE4036]"
                 >
-                  Home
+                  About
                 </button>
               </li>
               <li>
@@ -57,6 +56,14 @@ export default function Footer() {
                   className="hover:text-[#EE4036]"
                 >
                   Portfolio
+                </button>
+              </li>
+              <li>
+                <button
+                  onClick={() => handleScroll("testimonial")}
+                  className="hover:text-[#EE4036]"
+                >
+                  Testimonials
                 </button>
               </li>
               <li>

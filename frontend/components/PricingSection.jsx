@@ -37,7 +37,7 @@ export default function PricingSection() {
               Perfect for Landing Pages & Portfolio Sites
               <br />
               <span className="text-sm mt-2 inline-block">
-                <b>Stack:</b> HTML, CSS, React
+                <b>Stack:</b> HTML, CSS, TailwindCSS, React, Next.js
               </span>
             </p>
             <div className="text-right text-yellow-400 text-xl font-bold mb-6">
@@ -67,7 +67,7 @@ export default function PricingSection() {
             onClick={() => {
               window.open("https://wa.me/01300113023", "_blank");
             }}
-            className="w-full bg-[#212428] text-[#FAAF40] py-3 rounded-md font-semibold hover:bg-[#17191c] transition duration-150 shadow-[0_0_5px_rgba(255,255,255,0.3)] mt-21"
+            className="w-full bg-[#212428] text-[#FAAF40] py-3 rounded-md font-semibold hover:bg-[#17191c] transition duration-150 shadow-[0_0_5px_rgba(255,255,255,0.3)] mt-18.5"
           >
             Get Started
           </button>
@@ -84,7 +84,7 @@ export default function PricingSection() {
               Ideal for Business Websites & Dashboards
               <br />
               <span className="text-sm mt-2 inline-block">
-                <b>Stack:</b> React, Next.js, Tailwind
+                <b>Stack:</b> React, Next.js, Node.js, MongoDB
               </span>
             </p>
             <div className="text-right text-yellow-400 text-xl font-bold mb-6">
@@ -97,16 +97,19 @@ export default function PricingSection() {
               <Icon /> Up to 6 Dynamic Pages
             </li>
             <li className="flex items-center gap-4">
-              <Icon /> API Integration & State Management
+              <Icon /> API Development and Integration
+            </li>
+            <li className="flex items-center gap-4">
+              <Icon /> State management and caching
             </li>
             <li className="flex items-center gap-4">
               <Icon /> Responsive & SEO Friendly
             </li>
             <li className="flex items-center gap-4">
-              <Icon /> Admin Dashboard or Analytics View
+              <Icon /> Admin Dashboard and Analytics View
             </li>
             <li className="flex items-center gap-4">
-              <Icon /> 5 Revisions
+              <Icon /> 10 Revisions
             </li>
           </ul>
 
@@ -131,7 +134,7 @@ export default function PricingSection() {
               For Full-Stack Projects & Remote Teams
               <br />
               <span className="text-sm mt-2 inline-block">
-                <b>Stack:</b> React.js, Node.js, Express.js, MongoDB
+                <b>Stack:</b> React.js, Node.js, PostgreSQL, Redis, Docker
               </span>
             </p>
             <div className="text-right text-yellow-400 text-xl font-bold mb-6">
@@ -150,7 +153,7 @@ export default function PricingSection() {
               <Icon /> API development & File Upload
             </li>
             <li className="flex items-center gap-4">
-              <Icon /> Admin Control Panel
+              <Icon /> Admin Control Panel (RBAC)
             </li>
             <li className="flex items-center gap-4">
               <Icon /> Ongoing Support & Commission-Based Work

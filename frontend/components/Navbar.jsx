@@ -1,18 +1,18 @@
 "use client";
 import { useState, useEffect } from "react";
-import { ShoppingCart, Menu, X } from "lucide-react";
+import { ShoppingCart, Menu, X, BriefcaseBusiness } from "lucide-react";
 import { handleScroll } from "../utility/utility";
 import Logo from "@/public/Logo.png";
 import Image from "next/image";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
-  const [active, setActive] = useState("home");
+  const [active, setActive] = useState("about");
 
-  const sections = ["home", "services", "portfolio", "testimonial", "contact"];
+  const sections = ["about", "services", "portfolio", "testimonial", "contact"];
 
   const handleClick = (section) => {
-    if (section === "home") {
+    if (section === "about") {
       window.scrollTo({ top: 0, behavior: "smooth" });
     } else {
       handleScroll(section);
@@ -24,7 +24,7 @@ export default function Navbar() {
     const handleScrollSpy = () => {
       // Always detect home when near top
       if (window.scrollY < 200) {
-        setActive("home");
+        setActive("about");
         return;
       }
 
@@ -45,10 +45,10 @@ export default function Navbar() {
   }, []);
 
   return (
-    <nav className="bg-[#212428] border-b border-gray-700 px-6 md:px-18 py-4 flex items-center justify-around fixed top-0 left-0 w-full z-50">
+    <nav className="bg-[#212428] border-b border-gray-700 px-6 md:px-40 py-4 flex items-center justify-between fixed top-0 left-0 w-full z-50">
       {/* Logo */}
       <div
-        onClick={() => handleClick("home")}
+        onClick={() => handleClick("about")}
         className="flex items-center gap-3 cursor-pointer"
       >
         <Image src={Logo} alt="Logo" width={40} height={40} />
@@ -81,8 +81,8 @@ export default function Navbar() {
           onClick={() => window.open("https://wa.me/01300113023", "_blank")}
           className="hidden md:flex items-center gap-2 bg-[#1A1C20] shadow-md shadow-[#63636352] px-4 py-2 rounded-md font-medium hover:scale-105 transition text-[#EE4036]"
         >
-          <ShoppingCart size={16} />
-          Buy Now
+          <BriefcaseBusiness size={16} />
+          Hire Me
         </button>
 
         <button
