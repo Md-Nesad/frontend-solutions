@@ -122,8 +122,8 @@ export default function Navbar() {
             }
             className="flex items-center gap-2 bg-[#1A1C20] shadow-md shadow-[#63636352] px-4 py-2 rounded-md font-medium hover:scale-105 transition text-[#EE4036]"
           >
-            <ShoppingCart size={16} />
-            Buy Now
+            <BriefcaseBusiness size={16} />
+            Hire me
           </button>
         </ul>
       </div>

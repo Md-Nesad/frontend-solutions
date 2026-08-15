@@ -25,7 +25,7 @@ export default function WhatsAppFloatingButton() {
       href="https://wa.me/01300113023" // <-- your number
       target="_blank"
       rel="noopener noreferrer"
-      className={`fixed bottom-20 right-1.5 z-50 transition-all duration-300 ${
+      className={`fixed max-sm:hidden bottom-20 right-1.5 z-50 transition-all duration-300 ${
         show
           ? "opacity-100 translate-y-0 animate-pulse"
           : "opacity-0 translate-y-10 pointer-events-none"

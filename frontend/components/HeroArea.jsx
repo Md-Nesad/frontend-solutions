@@ -119,7 +119,7 @@ export default function HeroArea() {
         </motion.p>
 
         {/* Contact Button */}
-        <div className="flex gap-10">
+        <div className="flex-col sm:flex-row sm:gap-10">
           <motion.button
             onClick={() => {
               window.open("https://wa.me/01300113023", "_blank");
@@ -127,7 +127,7 @@ export default function HeroArea() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.5, delay: 0.5 }}
-            className="flex items-center gap-3 bg-[#212428] shadow-md shadow-[#63636352] px-6 py-3 rounded-md text-[#EE4036] font-semibold hover:scale-105 transition"
+            className="flex items-center gap-3 bg-[#212428] shadow-md shadow-[#63636352] px-6 py-3 rounded-md text-[#EE4036] font-semibold hover:scale-105 transition max-sm:mb-4 max-sm:w-full"
           >
             Hire me <BriefcaseBusiness size={18} />
           </motion.button>
@@ -137,7 +137,7 @@ export default function HeroArea() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.5, delay: 0.5 }}
-            className="flex items-center gap-2 bg-[#212428] shadow-md shadow-[#63636352] px-6 py-3 rounded-md text-[#EE4036] font-semibold hover:scale-105 transition"
+            className="flex items-center gap-2 bg-[#212428] shadow-md shadow-[#63636352] px-6 py-3 rounded-md text-[#EE4036] font-semibold hover:scale-105 transition max-sm:w-full"
           >
             Download Resume <Download size={18} />
           </motion.button>
@@ -178,7 +178,7 @@ export default function HeroArea() {
                 </motion.div>
               ))}
             </div> */}
-            <div className="flex gap-3">
+            <div className="flex flex-wrap gap-2 sm:gap-3">
               {skills.map((skill, idx) => (
                 <motion.div
                   key={idx}
@@ -215,7 +215,9 @@ export default function HeroArea() {
                   {/* Icon */}
                   <div
                     className="
-          bg-[#191a1d] p-3 rounded-lg w-14 h-14
+          bg-[#191a1d] p-2.5 sm:p-3
+          rounded-lg
+          w-12 h-12 sm:w-14 sm:h-14
           flex items-center justify-center
           transition-all duration-300
           hover:scale-110 hover:shadow-md
@@ -227,7 +229,7 @@ export default function HeroArea() {
                       alt={skill.name}
                       width={40}
                       height={40}
-                      className="object-cover"
+                      className="object-cover w-8 h-8 sm:w-10 sm:h-10"
                     />
                   </div>
                 </motion.div>
