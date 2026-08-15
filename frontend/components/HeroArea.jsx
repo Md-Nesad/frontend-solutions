@@ -119,7 +119,7 @@ export default function HeroArea() {
         </motion.p>
 
         {/* Contact Button */}
-        <div className="flex-col sm:flex-row sm:gap-10">
+        <div className="flex sm:gap-10 max-sm:flex-col">
           <motion.button
             onClick={() => {
               window.open("https://wa.me/01300113023", "_blank");
@@ -149,35 +149,7 @@ export default function HeroArea() {
             <p className="text-xs tracking-widest text-gray-400 mb-3">
               BEST SKILL ON
             </p>
-            {/* <div className="flex gap-3">
-              {[
-                figma,
-                javaScript,
-                react,
-                typeScript,
-                nodeJs,
-                mongodb,
-                postgreSql,
-                docker,
-              ].map((icon, idx) => (
-                <motion.div
-                  key={idx}
-                  initial={{ opacity: 0, scale: 0.8 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  transition={{ duration: 0.6, delay: 0.8 + idx * 0.2 }}
-                  className="bg-[#191a1d] p-3 rounded-lg w-14 h-14 flex items-center justify-center 
-                     transition-transform duration-300 hover:scale-110 hover:shadow-md hover:shadow-[#63636352]"
-                >
-                  <Image
-                    src={icon}
-                    alt="skill icon"
-                    width={40}
-                    height={40}
-                    className="object-cover"
-                  />
-                </motion.div>
-              ))}
-            </div> */}
+
             <div className="flex flex-wrap gap-2 sm:gap-3">
               {skills.map((skill, idx) => (
                 <motion.div
@@ -229,62 +201,13 @@ export default function HeroArea() {
                       alt={skill.name}
                       width={40}
                       height={40}
-                      className="object-cover w-8 h-8 sm:w-10 sm:h-10"
+                      className="object-cover w-8 h-8s"
                     />
                   </div>
                 </motion.div>
               ))}
             </div>
           </div>
-
-          {/* Social Links */}
-          {/* <div className="md:mt-1">
-            <p className="text-xs tracking-widest text-gray-400 mb-2">
-              FIND WITH ME
-            </p>
-            <div className="flex gap-3">
-              {[
-                {
-                  src: linkedin,
-                  alt: "Contact on linkedin",
-                  link: "https://www.linkedin.com/in/mdnesad/",
-                },
-                {
-                  src: fiverr,
-                  alt: "Contact on discord",
-                  link: "https://discord.com/channels/@me",
-                },
-                {
-                  src: whatsApp,
-                  alt: "Contact by whatsApp",
-                  link: "https://wa.me/01300113023",
-                },
-              ].map((social, idx) => {
-                return (
-                  <motion.a
-                    key={idx}
-                    href={social.link}
-                    initial={{ opacity: 0, scale: 0.8 }}
-                    animate={{ opacity: 1, scale: 1 }}
-                    transition={{ duration: 0.6, delay: 1 + idx * 0.2 }}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className={`w-14 h-14 flex items-center justify-center bg-[#212428] rounded-lg
-                     transition-transform duration-300 hover:scale-110 hover:shadow-md hover:shadow-[#63636352]`}
-                  >
-                    <Image
-                      src={social.src}
-                      alt={social.alt}
-                      className="object-contain"
-                      width={50}
-                      height={50}
-                      title={social.alt}
-                    />
-                  </motion.a>
-                );
-              })}
-            </div>
-          </div> */}
         </div>
       </div>
 
