@@ -26,8 +26,8 @@ export default function HeroArea() {
 
   const downloadResume = () => {
     const link = document.createElement("a");
-    link.href = "/resume/Nesad-resume.pdf";
-    link.download = "Nesad-resume.pdf";
+    link.href = "/resume/Md_Nesad_Full_Stack_Developer_Resume.pdf";
+    link.download = "Md_Nesad_Full_Stack_Developer_Resume.pdf";
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
@@ -109,13 +109,14 @@ export default function HeroArea() {
           transition={{ duration: 0.8, delay: 0.4 }}
           className="text-gray-300 leading-relaxed max-sm:text-justify"
         >
-          Before collaborating with new projects, I take the time to understand
-          client's requirements, business goals, and target audience. I analyze
-          them, design maintainable architecture and scalable systems to deliver
-          effective solutions using the right technologies and tools. I ensure
-          timely delivery, maintain clear communication, and provide regular
-          updates throughout the process—focusing on reliability and client
-          satisfaction.
+          I don’t just build software. I build solutions people can rely on. I
+          take your ideas, understand the real problem behind them, and turn
+          them into clean, secure, scalable, and thoughtfully designed products.
+          With strong software architecture, system design, performance
+          optimization, and production-ready deployment, logging, and
+          monitoring, I build applications that work reliably today and are
+          ready to grow tomorrow. So you can focus on your business with
+          confidence.
         </motion.p>
 
         {/* Contact Button */}
