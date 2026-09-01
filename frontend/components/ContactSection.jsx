@@ -1,4 +1,6 @@
 "use client";
+
+import { useState } from "react";
 import contact from "@/public/contact.png";
 import Image from "next/image";
 import fiverr from "@/public/HeroImage/discord.png";
@@ -6,7 +8,38 @@ import linkedin from "@/public/HeroImage/linkedin.png";
 import whatsApp from "@/public/HeroImage/whatsapp.png";
 import { FiChevronDown } from "react-icons/fi";
 import { motion } from "framer-motion";
+
 export default function ContactSection() {
+  const [status, setStatus] = useState("");
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    setStatus("sending");
+
+    const form = e.currentTarget;
+    const formData = new FormData(form);
+
+    try {
+      const response = await fetch("https://formspree.io/f/mgaeakbj", {
+        method: "POST",
+        body: formData,
+        headers: {
+          Accept: "application/json",
+        },
+      });
+
+      if (response.ok) {
+        setStatus("success");
+        form.reset();
+      } else {
+        setStatus("error");
+      }
+    } catch (error) {
+      setStatus("error");
+    }
+  };
+
   return (
     <section
       id="contact"
@@ -20,6 +53,7 @@ export default function ContactSection() {
         className="text-center mb-16"
       >
         <p className="text-[#EE4036] text-sm font-semibold">Contact Me</p>
+
         <h2 className="text-4xl max-sm:text-2xl md:text-4xl text-[#F5EDFF] font-bold mt-2">
           Let’s Build Something Great
         </h2>
@@ -34,8 +68,7 @@ export default function ContactSection() {
       >
         {/* Contact Form */}
         <form
-          action="https://formsubmit.co/nesadm26@gmail.com"
-          method="POST"
+          onSubmit={handleSubmit}
           className="lg:col-span-2 bg-[#212428] p-8 rounded-lg shadow-[0_0_5px_rgba(255,255,255,0.3)] space-y-6"
         >
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -43,6 +76,7 @@ export default function ContactSection() {
               <label className="block text-sm mb-2 text-[#F5EDFFCC]">
                 YOUR NAME
               </label>
+
               <input
                 type="text"
                 name="name"
@@ -50,21 +84,25 @@ export default function ContactSection() {
                 className="w-full bg-[#1E2125] p-3 rounded border-none focus:outline-none shadow-[inset_0_2px_6px_rgba(0,0,0,0.6)]"
               />
             </div>
+
             <div>
               <label className="block text-sm mb-2 text-[#F5EDFFCC]">
                 PHONE NUMBER
               </label>
+
               <input
-                type="number"
+                type="tel"
                 name="number"
                 required
-                className="w-full bg-[#1E2125] p-3 rounded border-none focus:outline-none shadow-[inset_0_2px_6px_rgba(0,0,0,0.6)] appearance-none"
+                className="w-full bg-[#1E2125] p-3 rounded border-none focus:outline-none shadow-[inset_0_2px_6px_rgba(0,0,0,0.6)]"
               />
             </div>
+
             <div>
               <label className="block text-sm mb-2 text-[#F5EDFFCC]">
                 EMAIL
               </label>
+
               <input
                 type="email"
                 name="email"
@@ -72,22 +110,29 @@ export default function ContactSection() {
                 className="w-full bg-[#1E2125] p-3 rounded border-none focus:outline-none shadow-[inset_0_2px_6px_rgba(0,0,0,0.6)]"
               />
             </div>
+
             <div>
               <label className="block text-sm mb-2 text-[#F5EDFFCC]">
                 Package
               </label>
+
               <div className="relative">
                 <select
                   name="package"
                   required
-                  className="w-full bg-[#1E2125] text-[#F5EDFFCC] p-3 rounded border-none focus:outline-none shadow-[inset_0_2px_6px_rgba(0,0,0,0.6)] appearance-none curosr-pointer"
+                  defaultValue=""
+                  className="w-full bg-[#1E2125] text-[#F5EDFFCC] p-3 rounded border-none focus:outline-none shadow-[inset_0_2px_6px_rgba(0,0,0,0.6)] appearance-none cursor-pointer"
                 >
-                  <option>Select Package</option>
-                  <option>Starter Plan</option>
-                  <option>Pro Plan</option>
-                  <option>Premium Plan</option>
+                  <option value="" disabled>
+                    Select Package
+                  </option>
+
+                  <option value="Starter Plan">Starter Plan</option>
+                  <option value="Pro Plan">Pro Plan</option>
+                  <option value="Premium Plan">Premium Plan</option>
                 </select>
-                <FiChevronDown className="absolute top-4 right-3 text-[#F5EDFFCC]" />
+
+                <FiChevronDown className="absolute top-4 right-3 text-[#F5EDFFCC] pointer-events-none" />
               </div>
             </div>
           </div>
@@ -96,6 +141,7 @@ export default function ContactSection() {
             <label className="block text-sm mb-2 text-[#F5EDFFCC]">
               SUBJECT
             </label>
+
             <input
               type="text"
               name="subject"
@@ -106,20 +152,37 @@ export default function ContactSection() {
 
           <div>
             <label className="block text-sm mb-2 text-[#F5EDFFCC]">
-              MESSAGE
+              Project Details (Optional)
             </label>
+
             <textarea
               name="message"
-              rows="3"
+              rows={3}
               className="w-full bg-[#1E2125] p-3 rounded border-none focus:outline-none shadow-[inset_0_2px_6px_rgba(0,0,0,0.6)]"
-            ></textarea>
+            />
           </div>
+
+          {/* Success Message */}
+          {status === "success" && (
+            <div className="bg-green-500/10 border border-green-500/30 text-green-400 px-4 py-3 rounded">
+              Your message has been sent successfully! I’ll get back to you
+              soon.
+            </div>
+          )}
+
+          {/* Error Message */}
+          {status === "error" && (
+            <div className="bg-red-500/10 border border-red-500/30 text-red-400 px-4 py-3 rounded">
+              Something went wrong. Please try again.
+            </div>
+          )}
 
           <button
             type="submit"
-            className="w-full bg-[#212428] py-3 rounded-sm shadow-[0_0_5px_rgba(255,255,255,0.3)] text-[#F5EDFFCC] font-semibold hover:bg-[#17191c] transition mt-8"
+            disabled={status === "sending"}
+            className="w-full bg-[#212428] py-3 rounded-sm shadow-[0_0_5px_rgba(255,255,255,0.3)] text-[#F5EDFFCC] font-semibold hover:bg-[#17191c] transition mt-8 disabled:opacity-50 disabled:cursor-not-allowed"
           >
-            Send Message
+            {status === "sending" ? "Sending..." : "Send Message"}
           </button>
         </form>
 
@@ -130,23 +193,29 @@ export default function ContactSection() {
             alt="Card"
             className="rounded-md mb-6 hover:scale-103 transition duration-300"
           />
+
           <h3 className="text-lg font-semibold mb-1 text-[#F5EDFFCC]">
             Md. Nesad
           </h3>
+
           <p className="text-gray-400 mb-4">Full Stack Developer</p>
+
           <p className="text-gray-400 mb-4">
             Digital solutions for a connected world. We specialize in crafting
             seamless digital experiences that drive results. Let's create
             something amazing together.
           </p>
+
           <p className="text-gray-400 mb-2">
             <b>WhatsApp:</b> +880 1300-113023
           </p>
+
           <p className="text-gray-400 mb-6">
             <b>Email:</b> nesadm26@gmail.com
           </p>
 
           <p className="text-gray-400 mb-2">FIND WITH ME</p>
+
           <div className="md:mt-1">
             <div className="flex gap-3">
               {[
@@ -172,11 +241,13 @@ export default function ContactSection() {
                     href={social.link}
                     initial={{ opacity: 0, scale: 0.8 }}
                     animate={{ opacity: 1, scale: 1 }}
-                    transition={{ duration: 0.6, delay: 1 + idx * 0.2 }}
+                    transition={{
+                      duration: 0.6,
+                      delay: 1 + idx * 0.2,
+                    }}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className={`w-14 h-14 flex items-center justify-center bg-[#212428] rounded-lg
-                     transition-transform duration-300 hover:scale-110 hover:shadow-md hover:shadow-[#63636352]`}
+                    className="w-14 h-14 flex items-center justify-center bg-[#212428] rounded-lg transition-transform duration-300 hover:scale-110 hover:shadow-md hover:shadow-[#63636352]"
                   >
                     <Image
                       src={social.src}

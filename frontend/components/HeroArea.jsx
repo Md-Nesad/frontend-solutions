@@ -12,6 +12,7 @@ import postgreSql from "@/public/HeroImage/postgreSql.png";
 import docker from "@/public/HeroImage/docker.png";
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
+import { handleScroll } from "@/utility/utility";
 
 export default function HeroArea() {
   const titles = [
@@ -122,9 +123,7 @@ export default function HeroArea() {
         {/* Contact Button */}
         <div className="flex sm:gap-10 max-sm:flex-col">
           <motion.button
-            onClick={() => {
-              window.open("https://wa.me/01300113023", "_blank");
-            }}
+            onClick={() => handleScroll("contact")}
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.5, delay: 0.5 }}
